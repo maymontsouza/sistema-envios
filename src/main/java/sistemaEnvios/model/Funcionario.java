@@ -9,46 +9,9 @@ import sistemaEnvios.model.Pessoa;
  *
  * @author mayara
  */
-public class Funcionario extends Pessoa{
-    private int CPF;
-    private String login;
-    private int senha;
+public class Funcionario extends Pessoa {
 
-    public Funcionario(int CPF, String login, int senha) {
-        this.CPF = CPF;
-        this.login = login;
-        this.senha = senha;
+    public Funcionario(int codigo, String nome, String email, int telefone, Endereco endereco) {
+        super(codigo, nome, email, telefone, endereco);
     }
-    
-
-    public int getCPF() {
-        return CPF;
-    }
-
-    public void setCPF(int CPF) {
-        this.CPF = CPF;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
-    public int getSenha() {
-        return senha;
-    }
-
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
-    
-    
-
-
-    
-
-    
 }

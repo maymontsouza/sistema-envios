@@ -8,10 +8,6 @@ package sistemaEnvios.model;
  *
  * @author mayara
  */
-public class Remetente extends Usuario {
-
-    public Remetente(String nome, String email, int telefone, Endereco endereco) {
-        super(nome, email, telefone, endereco);
-    }
+public class FreteNormal implements Frete {
     
 }

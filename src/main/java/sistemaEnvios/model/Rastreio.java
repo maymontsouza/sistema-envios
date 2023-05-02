@@ -10,5 +10,19 @@ package sistemaEnvios.model;
  */
 public class Rastreio {
     private Envio codigo;
+
+    public Rastreio(Envio codigo) {
+        this.codigo = codigo;
+    }
+
+    public Envio getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Envio codigo) {
+        this.codigo = codigo;
+    }
+    
+    
     
 }

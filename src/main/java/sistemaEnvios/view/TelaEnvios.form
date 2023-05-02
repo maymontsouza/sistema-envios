@@ -23,53 +23,6 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
-                      <Component id="lbcadastro" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lbTituloDestinatario" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="lbCodigoRemetente" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                              <Component id="lbNomeRemetente" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="txtCodigoDestinatario" min="-2" pref="85" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtNomeRemetente1" alignment="0" min="-2" pref="452" max="-2" attributes="0"/>
-                                  <Component id="txtNomeRemetente" min="-2" pref="452" max="-2" attributes="0"/>
-                                  <Component id="lbNomeDestinatario" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="lbTituloObjeto" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="107" pref="107" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtNomeRemetente2" alignment="0" min="-2" pref="452" max="-2" attributes="0"/>
-                                  <Component id="lbNomeDestinatario1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Component id="lbCodigoDestinatario1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbCodigoDestinatario" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="txtCodigoRemetente" alignment="0" max="32767" attributes="0"/>
-                              <Component id="lbTituloRemetente" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="txtCodigoDestinatario1" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
-                          <Component id="txtCodigoUsuario" min="-2" pref="113" max="-2" attributes="0"/>
-                          <Component id="lbCodigoUsuario" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="0" pref="41" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-          </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
               <Component id="btnExcluir" min="-2" pref="90" max="-2" attributes="0"/>
@@ -81,16 +34,143 @@
               <Component id="btnSalvar" min="-2" pref="90" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
                       <Component id="txtFrete" min="-2" pref="115" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="252" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="288" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="txtCidade1" min="-2" pref="227" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lbBairro1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtBairro1" min="-2" pref="227" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="lbCodigoDestinatario1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="txtNomeRemetente2" alignment="0" min="-2" pref="452" max="-2" attributes="0"/>
+                                                  <Component id="lbNomeDestinatario1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <Component id="txtCodigoDestinatario1" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtTipoObjeto" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="lbCidade1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="txtEstado1" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="lbNumero1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtNumero1" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="lbEstado1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lbLogradouro1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbLogradouro" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbTituloDestinatario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbCodigoDestinatario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                              <Component id="lbCep1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtCep1" min="-2" pref="177" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                              <Component id="lbNomeDestinatario" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtNomeRemetente1" min="-2" pref="564" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="txtBairro" min="-2" pref="227" max="-2" attributes="0"/>
+                                                  <Component id="lbBairro" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Group type="102" alignment="1" attributes="0">
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="txtNumero" min="-2" pref="69" max="-2" attributes="0"/>
+                                                          <Component id="lbNumero" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <EmptySpace max="32767" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" attributes="0">
+                                                          <Component id="lbEstado" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="txtEstado" min="-2" pref="75" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                                      <Component id="lbCep" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="txtCep" min="-2" pref="169" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Component id="lbTituloObjeto" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbCidade" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                      <Component id="lbcadastro" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtCodigoUsuario" alignment="0" min="-2" pref="113" max="-2" attributes="0"/>
+                                  <Component id="lbCodigoUsuario" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtCodigoDestinatario" alignment="0" min="-2" pref="85" max="-2" attributes="0"/>
+                                  <Component id="txtLogradouro" alignment="0" min="-2" pref="483" max="-2" attributes="0"/>
+                                  <Component id="txtLogradouro1" alignment="0" min="-2" pref="481" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="txtCodigoRemetente" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="lbTituloRemetente" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="lbCodigoRemetente" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lbNomeRemetente" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtNomeRemetente" min="-2" pref="556" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="txtCidade" alignment="0" min="-2" pref="227" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -115,9 +195,33 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtCodigoRemetente" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtNomeRemetente" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNomeRemetente" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbLogradouro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbCep" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtLogradouro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCep" alignment="3" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbCidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbNumero" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbEstado" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbBairro" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtCidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNumero" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstado" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtBairro" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
               <Component id="lbTituloDestinatario" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -129,23 +233,49 @@
                   <Component id="txtCodigoDestinatario" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtNomeRemetente1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace type="unrelated" pref="18" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbLogradouro1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbCep1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtLogradouro1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCep1" alignment="3" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbCidade1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbNumero1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbEstado1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbBairro1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtCidade1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNumero1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstado1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtBairro1" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Component id="lbTituloObjeto" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="lbCodigoDestinatario1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lbNomeDestinatario1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="txtCodigoDestinatario1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="txtNomeRemetente2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTipoObjeto" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="txtFrete" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="49" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btnExcluir" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnLimpar" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -214,7 +344,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Liberation Sans" size="15" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Remetente:*"/>
+        <Property name="text" type="java.lang.String" value="REMETENTE:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCodigoRemetente">
@@ -239,7 +369,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Liberation Sans" size="15" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Destinat&#xe1;rio:*"/>
+        <Property name="text" type="java.lang.String" value="DESTINAT&#xc1;RIO:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCodigoDestinatario">
@@ -268,7 +398,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Liberation Sans" size="15" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Objeto:*"/>
+        <Property name="text" type="java.lang.String" value="OBJETO:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCodigoDestinatario1">
@@ -283,10 +413,113 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Liberation Sans" size="15" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Frete"/>
+        <Property name="text" type="java.lang.String" value="FRETE:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtFrete">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tipo:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTipoObjeto">
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCidade">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbBairro">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bairro:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtBairro">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbNumero">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N&#xba;:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNumero">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNumeroActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbEstado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Estado:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbLogradouro">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Logradouro:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtEstado">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEstadoActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtLogradouro">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbCep">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CEP:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCep">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbCidade">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cidade:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCidade1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbBairro1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bairro:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtBairro1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbNumero1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="N&#xba;:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNumero1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNumero1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbEstado1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Estado:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbLogradouro1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Logradouro:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtEstado1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEstado1ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtLogradouro1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbCep1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CEP:*"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCep1">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbCidade1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cidade:*"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

@@ -8,9 +8,6 @@ package sistemaEnvios.model;
  *
  * @author mayara
  */
-public class Destinatario extends Usuario {
-
-    public Destinatario(String nome, String email, int telefone, Endereco endereco) {
-        super(nome, email, telefone, endereco);
-    }
+public class FreteSedex {
+    
 }

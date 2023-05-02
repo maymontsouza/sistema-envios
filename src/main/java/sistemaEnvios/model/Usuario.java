@@ -8,52 +8,48 @@ package sistemaEnvios.model;
  *
  * @author mayara
  */
-public class Usuario extends Pessoa{
-    private String nome;
-    private String email;
-    private int telefone;
-    private Endereco endereco;
+public class Usuario {
+    private String CPF;
+    private String login;
+    private String senha;
 
-    public Usuario(String nome, String email, int telefone, Endereco endereco) {
-        this.nome = nome;
-        this.email = email;
-        this.telefone = telefone;
-        this.endereco = endereco;
-        
+    public Usuario(String CPF, String login, String senha) {
+        this.CPF = CPF;
+        this.login = login;
+        this.senha = senha;
     }
 
-    public String getNome() {
-        return nome;
+    public String getCPF() {
+        return CPF;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
     }
 
-    public String getEmail() {
-        return email;
+    public String getLogin() {
+        return login;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public int getTelefone() {
-        return telefone;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setTelefone(int telefone) {
-        this.telefone = telefone;
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    @Override
+    public String toString() {
+        return "Usuario{" + "CPF=" + CPF + ", login=" + login + ", senha=" + senha + '}';
     }
     
+    
+        
     
     
 }

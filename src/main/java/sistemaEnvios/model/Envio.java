@@ -13,29 +13,18 @@ import java.util.List;
  */
 public class Envio {
     private int codigo;
-    private float frete;
-    private Remetente remetente;
-    private Destinatario destinatario;
+    private Pessoa remetente;
+    private Pessoa Destinatario;
     private Objeto objeto;
     
-        public static List<Envio> envios = new ArrayList();
+    public static List<Envio> envios = new ArrayList();
 
-
-    public Envio(int codigo, Remetente remetente, Destinatario destinatario, Objeto objeto, float frete) {
+    public Envio(int codigo, float frete, Pessoa remetente, Pessoa Destinatario, Objeto objeto) {
         this.codigo = codigo;
         this.remetente = remetente;
-        this.destinatario = destinatario;
+        this.Destinatario = Destinatario;
         this.objeto = objeto;
     }
-
-    public float getFrete() {
-        return frete;
-    }
-
-    public void setFrete(float frete) {
-        this.frete = frete;
-    }
-    
 
     public int getCodigo() {
         return codigo;
@@ -45,21 +34,23 @@ public class Envio {
         this.codigo = codigo;
     }
 
-    public Remetente getRemetente() {
+    public Pessoa getRemetente() {
         return remetente;
     }
 
-    public void setRemetente(Remetente remetente) {
+    public void setRemetente(Pessoa remetente) {
         this.remetente = remetente;
     }
 
-    public Destinatario getDestinatario() {
-        return destinatario;
+    public Pessoa getDestinatario() {
+        return Destinatario;
     }
 
-    public void setDestinatario(Destinatario destinatario) {
-        this.destinatario = destinatario;
+    public void setDestinatario(Pessoa Destinatario) {
+        this.Destinatario = Destinatario;
     }
+
+    
 
     public Objeto getObjeto() {
         return objeto;
@@ -71,8 +62,12 @@ public class Envio {
 
     @Override
     public String toString() {
-        return "Envio{" + "codigo=" + codigo + ", remetente=" + remetente + ", destinatario=" + destinatario + ", objeto=" + objeto + '}';
+        return "Envio{" + "codigo=" + codigo + ", remetente=" + remetente + ", Destinatario=" + Destinatario + ", objeto=" + objeto + '}';
     }
+
+    
+
+
     
     
     
