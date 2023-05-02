@@ -13,6 +13,7 @@ import java.util.List;
  */
 public class Envio {
     private int codigo;
+    private float frete;
     private Remetente remetente;
     private Destinatario destinatario;
     private Objeto objeto;
@@ -20,12 +21,21 @@ public class Envio {
         public static List<Envio> envios = new ArrayList();
 
 
-    public Envio(int codigo, Remetente remetente, Destinatario destinatario, Objeto objeto) {
+    public Envio(int codigo, Remetente remetente, Destinatario destinatario, Objeto objeto, float frete) {
         this.codigo = codigo;
         this.remetente = remetente;
         this.destinatario = destinatario;
         this.objeto = objeto;
     }
+
+    public float getFrete() {
+        return frete;
+    }
+
+    public void setFrete(float frete) {
+        this.frete = frete;
+    }
+    
 
     public int getCodigo() {
         return codigo;

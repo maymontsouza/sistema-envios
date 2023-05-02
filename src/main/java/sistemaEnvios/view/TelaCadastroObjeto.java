@@ -50,7 +50,7 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         txtOutrasInformacoes = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         btnExcluir.setText("Excluir");
         btnExcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -94,6 +94,12 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
         lbLargura.setText("Largura:");
 
         lbPeso.setText("Peso:");
+
+        txtAltura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAlturaActionPerformed(evt);
+            }
+        });
 
         txtLargura.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,6 +259,10 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
         txtValor.setText("");
     // End of variables declaration          
     }//GEN-LAST:event_btnLimparActionPerformed
+
+    private void txtAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAlturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAlturaActionPerformed
 
     /**
      * @param args the command line arguments

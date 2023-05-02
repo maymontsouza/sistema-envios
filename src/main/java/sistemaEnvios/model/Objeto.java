@@ -4,6 +4,8 @@
  */
 package sistemaEnvios.model;
 
+import sistemaEnvios.enums.Tipo;
+
 /**
  *
  * @author mayara
@@ -16,6 +18,9 @@ public class Objeto {
     private String largura;
     private String valor;
     private String informacoes;
+    private Tipo tipo;
+    
+    
 
     public Objeto(int codigo, String nome, String altura, String peso, String largura, String valor, String informacoes) {
         this.codigo = codigo;
@@ -26,6 +31,8 @@ public class Objeto {
         this.valor = valor;
         this.informacoes = informacoes;
     }
+    
+    
 
     public int getCodigo() {
         return codigo;
@@ -82,6 +89,13 @@ public class Objeto {
     public void setInformacoes(String informacoes) {
         this.informacoes = informacoes;
     }
+
+    @Override
+    public String toString() {
+        return "Objeto{" + "codigo=" + codigo + ", nome=" + nome + ", altura=" + altura + ", peso=" + peso + ", largura=" + largura + ", valor=" + valor + ", informacoes=" + informacoes + '}';
+    }
+    
+    
     
     
     

@@ -8,6 +8,6 @@ package sistemaEnvios.dao;
  *
  * @author mayara
  */
-public class UsuariosDAO {
+public class EnvioDAO {
     
 }

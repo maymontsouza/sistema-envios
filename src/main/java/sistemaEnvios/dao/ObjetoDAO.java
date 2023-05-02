@@ -4,10 +4,16 @@
  */
 package sistemaEnvios.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+import sistemaEnvios.model.Objeto;
+
 /**
  *
  * @author mayara
  */
-public class ObjetosDAO {
+public class ObjetoDAO {
+    
+    private static List<Objeto> objetos = new ArrayList<>();
     
 }
