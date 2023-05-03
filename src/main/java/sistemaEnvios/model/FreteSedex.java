@@ -8,6 +8,6 @@ package sistemaEnvios.model;
  *
  * @author mayara
  */
-public class FreteSedex {
+public class FreteSedex implements Frete {
     
 }

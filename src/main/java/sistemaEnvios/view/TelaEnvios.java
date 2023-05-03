@@ -28,10 +28,10 @@ public class TelaEnvios extends javax.swing.JFrame {
 
         btnExcluir = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
-        lbCodigoUsuario = new javax.swing.JLabel();
-        txtCodigoUsuario = new javax.swing.JTextField();
+        lbCodigoEnvio = new javax.swing.JLabel();
+        txtCodigoEnvio = new javax.swing.JTextField();
         btnAlterar = new javax.swing.JButton();
-        lbcadastro = new javax.swing.JLabel();
+        lbEnviarObjeto = new javax.swing.JLabel();
         btnSalvar = new javax.swing.JButton();
         lbTituloRemetente = new javax.swing.JLabel();
         txtCodigoRemetente = new javax.swing.JTextField();
@@ -42,40 +42,40 @@ public class TelaEnvios extends javax.swing.JFrame {
         txtCodigoDestinatario = new javax.swing.JTextField();
         lbCodigoDestinatario = new javax.swing.JLabel();
         lbNomeDestinatario = new javax.swing.JLabel();
-        txtNomeRemetente1 = new javax.swing.JTextField();
+        txtNomeDestinatario = new javax.swing.JTextField();
         lbNomeDestinatario1 = new javax.swing.JLabel();
-        txtNomeRemetente2 = new javax.swing.JTextField();
+        txtNomeObjeto = new javax.swing.JTextField();
         lbTituloObjeto = new javax.swing.JLabel();
-        txtCodigoDestinatario1 = new javax.swing.JTextField();
+        txtCodigoObjeto = new javax.swing.JTextField();
         lbCodigoDestinatario1 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lbFrete = new javax.swing.JLabel();
         txtFrete = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        lbTipoObjeto = new javax.swing.JLabel();
         txtTipoObjeto = new javax.swing.JTextField();
-        txtCidade = new javax.swing.JTextField();
+        txtCidadeRemetente = new javax.swing.JTextField();
         lbBairro = new javax.swing.JLabel();
-        txtBairro = new javax.swing.JTextField();
-        lbNumero = new javax.swing.JLabel();
-        txtNumero = new javax.swing.JTextField();
-        lbEstado = new javax.swing.JLabel();
+        txtBairroRemetente = new javax.swing.JTextField();
+        lbNumeroRemetente = new javax.swing.JLabel();
+        txtNumeroRemetente = new javax.swing.JTextField();
+        lbEstadoRemetente = new javax.swing.JLabel();
         lbLogradouro = new javax.swing.JLabel();
-        txtEstado = new javax.swing.JTextField();
-        txtLogradouro = new javax.swing.JTextField();
-        lbCep = new javax.swing.JLabel();
-        txtCep = new javax.swing.JTextField();
+        txtEstadoRemetente = new javax.swing.JTextField();
+        txtLogradouroRemetente = new javax.swing.JTextField();
+        lbCepRemetente = new javax.swing.JLabel();
+        txtCepRemetente = new javax.swing.JTextField();
         lbCidade = new javax.swing.JLabel();
-        txtCidade1 = new javax.swing.JTextField();
-        lbBairro1 = new javax.swing.JLabel();
-        txtBairro1 = new javax.swing.JTextField();
-        lbNumero1 = new javax.swing.JLabel();
-        txtNumero1 = new javax.swing.JTextField();
-        lbEstado1 = new javax.swing.JLabel();
+        txtCidadeDestinatario = new javax.swing.JTextField();
+        lbBairroDestinatario = new javax.swing.JLabel();
+        txtBairroDestinatario = new javax.swing.JTextField();
+        lbNumeroDestinatario = new javax.swing.JLabel();
+        txtEstadoDestinatario = new javax.swing.JTextField();
+        lbEstadoDestinatario = new javax.swing.JLabel();
         lbLogradouro1 = new javax.swing.JLabel();
-        txtEstado1 = new javax.swing.JTextField();
-        txtLogradouro1 = new javax.swing.JTextField();
-        lbCep1 = new javax.swing.JLabel();
-        txtCep1 = new javax.swing.JTextField();
-        lbCidade1 = new javax.swing.JLabel();
+        txtNumeroDestarinario = new javax.swing.JTextField();
+        txtLogradouroDestinatario = new javax.swing.JTextField();
+        lbCepDestinatario = new javax.swing.JLabel();
+        txtCepDestinatario = new javax.swing.JTextField();
+        lbCidadeDestinatario = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -93,15 +93,15 @@ public class TelaEnvios extends javax.swing.JFrame {
             }
         });
 
-        lbCodigoUsuario.setText("Código:*");
+        lbCodigoEnvio.setText("Código:*");
 
-        txtCodigoUsuario.setBackground(new java.awt.Color(204, 204, 204));
-        txtCodigoUsuario.setToolTipText("");
+        txtCodigoEnvio.setBackground(new java.awt.Color(204, 204, 204));
+        txtCodigoEnvio.setToolTipText("");
 
         btnAlterar.setText("Alterar");
 
-        lbcadastro.setFont(new java.awt.Font("Liberation Mono", 1, 18)); // NOI18N
-        lbcadastro.setText("Enviar Objeto");
+        lbEnviarObjeto.setFont(new java.awt.Font("Liberation Mono", 1, 18)); // NOI18N
+        lbEnviarObjeto.setText("Enviar Objeto");
 
         btnSalvar.setText("Salvar");
         btnSalvar.setToolTipText("");
@@ -138,185 +138,179 @@ public class TelaEnvios extends javax.swing.JFrame {
 
         lbCodigoDestinatario1.setText("Código:*");
 
-        jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
-        jLabel1.setText("FRETE:");
+        lbFrete.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
+        lbFrete.setText("FRETE:");
 
-        jLabel2.setText("Tipo:*");
+        lbTipoObjeto.setText("Tipo:*");
 
         lbBairro.setText("Bairro:*");
 
-        lbNumero.setText("Nº:*");
+        lbNumeroRemetente.setText("Nº:*");
 
-        txtNumero.addActionListener(new java.awt.event.ActionListener() {
+        txtNumeroRemetente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNumeroActionPerformed(evt);
+                txtNumeroRemetenteActionPerformed(evt);
             }
         });
 
-        lbEstado.setText("Estado:*");
+        lbEstadoRemetente.setText("Estado:*");
 
         lbLogradouro.setText("Logradouro:*");
 
-        txtEstado.addActionListener(new java.awt.event.ActionListener() {
+        txtEstadoRemetente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEstadoActionPerformed(evt);
+                txtEstadoRemetenteActionPerformed(evt);
             }
         });
 
-        lbCep.setText("CEP:*");
+        lbCepRemetente.setText("CEP:*");
 
         lbCidade.setText("Cidade:*");
 
-        lbBairro1.setText("Bairro:*");
+        lbBairroDestinatario.setText("Bairro:*");
 
-        lbNumero1.setText("Nº:*");
+        lbNumeroDestinatario.setText("Nº:*");
 
-        txtNumero1.addActionListener(new java.awt.event.ActionListener() {
+        txtEstadoDestinatario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNumero1ActionPerformed(evt);
+                txtEstadoDestinatarioActionPerformed(evt);
             }
         });
 
-        lbEstado1.setText("Estado:*");
+        lbEstadoDestinatario.setText("Estado:*");
 
         lbLogradouro1.setText("Logradouro:*");
 
-        txtEstado1.addActionListener(new java.awt.event.ActionListener() {
+        txtNumeroDestarinario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtEstado1ActionPerformed(evt);
+                txtNumeroDestarinarioActionPerformed(evt);
             }
         });
 
-        lbCep1.setText("CEP:*");
+        lbCepDestinatario.setText("CEP:*");
 
-        lbCidade1.setText("Cidade:*");
+        lbCidadeDestinatario.setText("Cidade:*");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtFrete, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(txtCidadeDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbBairroDestinatario)
+                            .addComponent(txtBairroDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(111, 111, 111)
+                        .addComponent(lbTipoObjeto)
+                        .addContainerGap(91, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbLogradouro1)
+                            .addComponent(lbLogradouro)
+                            .addComponent(lbTituloDestinatario)
+                            .addComponent(lbCodigoDestinatario)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(txtCidade1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lbBairro1)
-                                            .addComponent(txtBairro1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(111, 111, 111))
+                                .addGap(114, 114, 114)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lbCepDestinatario)
+                                        .addComponent(txtCepDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lbNomeDestinatario)
+                                        .addComponent(txtNomeDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(txtBairroRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(lbBairro))
+                                        .addGap(26, 26, 26)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(lbCodigoDestinatario1)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(107, 107, 107)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(txtNomeRemetente2, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(lbNomeDestinatario1)))
-                                            .addComponent(txtCodigoDestinatario1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(33, 33, 33)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(txtTipoObjeto)))
+                                                    .addComponent(txtNumeroRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(lbNumeroRemetente))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(lbEstadoRemetente)
+                                                    .addComponent(txtEstadoRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(lbCepRemetente)
+                                                .addComponent(txtCepRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                            .addComponent(lbTituloObjeto)
+                            .addComponent(lbCidade)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbCidade1)
+                                .addGap(3, 3, 3)
+                                .addComponent(lbEnviarObjeto))
+                            .addComponent(txtCodigoEnvio, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbCodigoEnvio)
+                            .addComponent(txtCodigoDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtLogradouroRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtLogradouroDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(txtCodigoRemetente, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lbTituloRemetente, javax.swing.GroupLayout.Alignment.LEADING))
+                                    .addComponent(lbCodigoRemetente))
+                                .addGap(23, 23, 23)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbNomeRemetente)
+                                    .addComponent(txtNomeRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtCidadeRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 27, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lbFrete)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(txtFrete, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lbCodigoDestinatario1)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(107, 107, 107)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(lbNomeDestinatario1)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(txtNomeObjeto, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)))
+                                    .addComponent(txtCodigoObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtTipoObjeto))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbCidadeDestinatario)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(txtEstado1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtNumeroDestarinario, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(lbNumero1)
+                                        .addComponent(lbNumeroDestinatario)
                                         .addGap(77, 77, 77)))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtNumero1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbEstado1))
-                                .addGap(6, 6, 6))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbLogradouro1)
-                                    .addComponent(lbLogradouro)
-                                    .addComponent(lbTituloDestinatario)
-                                    .addComponent(lbCodigoDestinatario)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(114, 114, 114)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(lbCep1)
-                                                .addComponent(txtCep1, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(lbNomeDestinatario)
-                                                .addComponent(txtNomeRemetente1, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(lbBairro))
-                                                .addGap(26, 26, 26)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(lbNumero))
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(lbEstado)
-                                                            .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(lbCep)
-                                                        .addComponent(txtCep, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                                    .addComponent(lbTituloObjeto)
-                                    .addComponent(lbCidade)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(3, 3, 3)
-                                        .addComponent(lbcadastro))
-                                    .addComponent(txtCodigoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbCodigoUsuario)
-                                    .addComponent(txtCodigoDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtLogradouro, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtLogradouro1, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                .addComponent(txtCodigoRemetente, javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(lbTituloRemetente, javax.swing.GroupLayout.Alignment.LEADING))
-                                            .addComponent(lbCodigoRemetente))
-                                        .addGap(23, 23, 23)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lbNomeRemetente)
-                                            .addComponent(txtNomeRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, 556, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 4, Short.MAX_VALUE)))
-                        .addGap(23, 23, 23))))
+                                    .addComponent(txtEstadoDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbEstadoDestinatario))))
+                        .addGap(29, 29, 29))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(44, 44, 44)
-                .addComponent(lbcadastro)
+                .addComponent(lbEnviarObjeto)
                 .addGap(18, 18, 18)
-                .addComponent(lbCodigoUsuario)
+                .addComponent(lbCodigoEnvio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtCodigoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtCodigoEnvio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28)
                 .addComponent(lbTituloRemetente)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -324,29 +318,30 @@ public class TelaEnvios extends javax.swing.JFrame {
                     .addComponent(lbCodigoRemetente)
                     .addComponent(lbNomeRemetente))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigoRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNomeRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtNomeRemetente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCodigoRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbLogradouro)
-                    .addComponent(lbCep))
+                    .addComponent(lbCepRemetente))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtLogradouro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCep))
+                    .addComponent(txtLogradouroRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCepRemetente))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbCidade)
-                    .addComponent(lbNumero)
-                    .addComponent(lbEstado)
+                    .addComponent(lbNumeroRemetente)
+                    .addComponent(lbEstadoRemetente)
                     .addComponent(lbBairro))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtBairroRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtCidadeRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtNumeroRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEstadoRemetente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(50, 50, 50)
                 .addComponent(lbTituloDestinatario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -356,50 +351,51 @@ public class TelaEnvios extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCodigoDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNomeRemetente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNomeDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbLogradouro1)
-                    .addComponent(lbCep1))
+                    .addComponent(lbCepDestinatario))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtLogradouro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCep1))
+                    .addComponent(txtLogradouroDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCepDestinatario))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbCidade1)
-                    .addComponent(lbNumero1)
-                    .addComponent(lbEstado1)
-                    .addComponent(lbBairro1))
+                    .addComponent(lbCidadeDestinatario)
+                    .addComponent(lbNumeroDestinatario)
+                    .addComponent(lbEstadoDestinatario)
+                    .addComponent(lbBairroDestinatario))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCidade1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNumero1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtEstado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtBairro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtBairroDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtCidadeDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEstadoDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtNumeroDestarinario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(30, 30, 30)
                 .addComponent(lbTituloObjeto)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbCodigoDestinatario1)
                     .addComponent(lbNomeDestinatario1)
-                    .addComponent(jLabel2))
+                    .addComponent(lbTipoObjeto))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigoDestinatario1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNomeRemetente2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCodigoObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNomeObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtTipoObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(40, 40, 40)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtFrete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(49, 49, 49)
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbFrete)
+                    .addComponent(txtFrete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnExcluir)
                     .addComponent(btnLimpar)
                     .addComponent(btnAlterar)
                     .addComponent(btnSalvar))
-                .addGap(39, 39, 39))
+                .addGap(41, 41, 41))
         );
 
         pack();
@@ -422,21 +418,21 @@ public class TelaEnvios extends javax.swing.JFrame {
 // TODO add your handling code here:
     }//GEN-LAST:event_btnLimparActionPerformed
 
-    private void txtNumeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroActionPerformed
+    private void txtNumeroRemetenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroRemetenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNumeroActionPerformed
+    }//GEN-LAST:event_txtNumeroRemetenteActionPerformed
 
-    private void txtEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEstadoActionPerformed
+    private void txtEstadoRemetenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEstadoRemetenteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtEstadoActionPerformed
+    }//GEN-LAST:event_txtEstadoRemetenteActionPerformed
 
-    private void txtNumero1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumero1ActionPerformed
+    private void txtEstadoDestinatarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEstadoDestinatarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNumero1ActionPerformed
+    }//GEN-LAST:event_txtEstadoDestinatarioActionPerformed
 
-    private void txtEstado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEstado1ActionPerformed
+    private void txtNumeroDestarinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroDestarinarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtEstado1ActionPerformed
+    }//GEN-LAST:event_txtNumeroDestarinarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -478,51 +474,51 @@ public class TelaEnvios extends javax.swing.JFrame {
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnSalvar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lbBairro;
-    private javax.swing.JLabel lbBairro1;
-    private javax.swing.JLabel lbCep;
-    private javax.swing.JLabel lbCep1;
+    private javax.swing.JLabel lbBairroDestinatario;
+    private javax.swing.JLabel lbCepDestinatario;
+    private javax.swing.JLabel lbCepRemetente;
     private javax.swing.JLabel lbCidade;
-    private javax.swing.JLabel lbCidade1;
+    private javax.swing.JLabel lbCidadeDestinatario;
     private javax.swing.JLabel lbCodigoDestinatario;
     private javax.swing.JLabel lbCodigoDestinatario1;
+    private javax.swing.JLabel lbCodigoEnvio;
     private javax.swing.JLabel lbCodigoRemetente;
-    private javax.swing.JLabel lbCodigoUsuario;
-    private javax.swing.JLabel lbEstado;
-    private javax.swing.JLabel lbEstado1;
+    private javax.swing.JLabel lbEnviarObjeto;
+    private javax.swing.JLabel lbEstadoDestinatario;
+    private javax.swing.JLabel lbEstadoRemetente;
+    private javax.swing.JLabel lbFrete;
     private javax.swing.JLabel lbLogradouro;
     private javax.swing.JLabel lbLogradouro1;
     private javax.swing.JLabel lbNomeDestinatario;
     private javax.swing.JLabel lbNomeDestinatario1;
     private javax.swing.JLabel lbNomeRemetente;
-    private javax.swing.JLabel lbNumero;
-    private javax.swing.JLabel lbNumero1;
+    private javax.swing.JLabel lbNumeroDestinatario;
+    private javax.swing.JLabel lbNumeroRemetente;
+    private javax.swing.JLabel lbTipoObjeto;
     private javax.swing.JLabel lbTituloDestinatario;
     private javax.swing.JLabel lbTituloObjeto;
     private javax.swing.JLabel lbTituloRemetente;
-    private javax.swing.JLabel lbcadastro;
-    private javax.swing.JTextField txtBairro;
-    private javax.swing.JTextField txtBairro1;
-    private javax.swing.JTextField txtCep;
-    private javax.swing.JTextField txtCep1;
-    private javax.swing.JTextField txtCidade;
-    private javax.swing.JTextField txtCidade1;
+    private javax.swing.JTextField txtBairroDestinatario;
+    private javax.swing.JTextField txtBairroRemetente;
+    private javax.swing.JTextField txtCepDestinatario;
+    private javax.swing.JTextField txtCepRemetente;
+    private javax.swing.JTextField txtCidadeDestinatario;
+    private javax.swing.JTextField txtCidadeRemetente;
     private javax.swing.JTextField txtCodigoDestinatario;
-    private javax.swing.JTextField txtCodigoDestinatario1;
+    private javax.swing.JTextField txtCodigoEnvio;
+    private javax.swing.JTextField txtCodigoObjeto;
     private javax.swing.JTextField txtCodigoRemetente;
-    private javax.swing.JTextField txtCodigoUsuario;
-    private javax.swing.JTextField txtEstado;
-    private javax.swing.JTextField txtEstado1;
+    private javax.swing.JTextField txtEstadoDestinatario;
+    private javax.swing.JTextField txtEstadoRemetente;
     private javax.swing.JTextField txtFrete;
-    private javax.swing.JTextField txtLogradouro;
-    private javax.swing.JTextField txtLogradouro1;
+    private javax.swing.JTextField txtLogradouroDestinatario;
+    private javax.swing.JTextField txtLogradouroRemetente;
+    private javax.swing.JTextField txtNomeDestinatario;
+    private javax.swing.JTextField txtNomeObjeto;
     private javax.swing.JTextField txtNomeRemetente;
-    private javax.swing.JTextField txtNomeRemetente1;
-    private javax.swing.JTextField txtNomeRemetente2;
-    private javax.swing.JTextField txtNumero;
-    private javax.swing.JTextField txtNumero1;
+    private javax.swing.JTextField txtNumeroDestarinario;
+    private javax.swing.JTextField txtNumeroRemetente;
     private javax.swing.JTextField txtTipoObjeto;
     // End of variables declaration//GEN-END:variables
 }

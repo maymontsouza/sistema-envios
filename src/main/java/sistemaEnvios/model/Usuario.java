@@ -8,7 +8,7 @@ package sistemaEnvios.model;
  *
  * @author mayara
  */
-public class Usuario {
+public abstract class Usuario {
     private String CPF;
     private String login;
     private String senha;
