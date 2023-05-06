@@ -23,20 +23,22 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbTituloSistemaEnvios" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbLogin" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtLogin" min="-2" pref="199" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Component id="btnCadastrarFuncionario" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbTituloSistemaEnvios" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbLogin" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtLogin" min="-2" pref="199" max="-2" attributes="0"/>
+                          <Component id="lbSenha" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtSenha" alignment="0" min="-2" pref="197" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="231" max="-2" attributes="0"/>
                       <Component id="btnEntrar" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="lbSenha" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtSenha" alignment="0" min="-2" pref="197" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="183" max="32767" attributes="0"/>
           </Group>
@@ -56,10 +58,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="txtSenha" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnCadastrarFuncionario" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="btnEntrar" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="btnEntrar" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="109" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -87,11 +86,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtLogin">
-    </Component>
-    <Component class="javax.swing.JButton" name="btnCadastrarFuncionario">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Cadastrar"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnEntrar">
       <Properties>

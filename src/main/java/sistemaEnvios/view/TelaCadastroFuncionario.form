@@ -263,56 +263,62 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbCPF" min="-2" pref="50" max="-2" attributes="0"/>
+                          <Component id="txtCPF" min="-2" pref="207" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbSenha" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="txtSenha" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="txtEmail" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="btnLimparFuncionario" min="-2" pref="94" max="-2" attributes="0"/>
+                                  <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                                  <Component id="btnExcluirFuncionario" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
+                                  <Component id="btnAlterarFuncionario" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="lnEmail" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbTelefone" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="btnSalvarFuncionario" min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="txtTelefone" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lbTituloSistemaEnvios" min="-2" max="-2" attributes="0"/>
                           <Component id="jLnome1" min="-2" pref="130" max="-2" attributes="0"/>
                           <Component id="txtNome" min="-2" pref="510" max="-2" attributes="0"/>
-                          <Component id="lnEmail" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtEmail" min="-2" pref="510" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="txtCPF" min="-2" pref="160" max="-2" attributes="0"/>
-                                      <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                                      <Component id="txtRG" min="-2" pref="140" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="lbCpf" min="-2" pref="50" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
-                                      <Component id="lgRG" min="-2" pref="85" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lbCelular" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <Component id="txtCelular" min="-2" pref="150" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtCodigoUsuario" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
-                                  <Component id="lbCodigo" alignment="0" min="-2" pref="70" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="294" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lbNivelAcesso" min="-2" pref="130" max="-2" attributes="0"/>
-                                  <Component id="cbNivelAcesso" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
                       </Group>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                      <Component id="btnLimparFuncionario" min="-2" pref="94" max="-2" attributes="0"/>
-                      <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
-                      <Component id="btnExcluirFuncionario" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
-                      <Component id="btnAlterarFuncionario" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                      <Component id="btnSalvarFuncionario" min="-2" pref="140" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbCodigo" min="-2" pref="70" max="-2" attributes="0"/>
+                          <Component id="txtCodigoUsuario" min="-2" pref="117" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lbNivelAcesso" min="-2" pref="130" max="-2" attributes="0"/>
+                          <Component id="cbNivelAcesso" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="62" max="32767" attributes="0"/>
@@ -339,23 +345,25 @@
               <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
               <Component id="txtNome" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbCpf" min="-2" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="lgRG" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="lbCelular" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lbCPF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbSenha" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtCPF" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtRG" min="-2" max="-2" attributes="0"/>
-                  <Component id="txtCelular" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtCPF" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtSenha" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="16" pref="16" max="-2" attributes="0"/>
-              <Component id="lnEmail" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lnEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
-              <Component id="txtEmail" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtEmail" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtTelefone" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnLimparFuncionario" min="-2" max="-2" attributes="0"/>
@@ -373,6 +381,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Alterar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAlterarFuncionarioActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSalvarFuncionario">
       <Properties>
@@ -410,29 +421,19 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCPFActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbCpf">
+    <Component class="javax.swing.JLabel" name="lbCPF">
       <Properties>
         <Property name="text" type="java.lang.String" value="CPF: *"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lgRG">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Login:*"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="txtRG">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRGActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="lbCelular">
+    <Component class="javax.swing.JLabel" name="lbSenha">
       <Properties>
         <Property name="text" type="java.lang.String" value="Senha:*"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtCelular">
+    <Component class="javax.swing.JTextField" name="txtSenha">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCelularActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtSenhaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNome">
@@ -474,7 +475,14 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Liberation Mono" size="18" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cadastro de Usu&#xe1;rio"/>
+        <Property name="text" type="java.lang.String" value="Cadastro de Funcion&#xe1;rio"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtTelefone">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbTelefone">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Telefone:"/>
       </Properties>
     </Component>
   </SubComponents>

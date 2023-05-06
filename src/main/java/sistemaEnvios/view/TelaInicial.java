@@ -40,6 +40,7 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jmiObjeto = new javax.swing.JMenuItem();
         jmiUsuario = new javax.swing.JMenuItem();
+        jmiFuncionario = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jmiRastreioObjeto = new javax.swing.JMenuItem();
         jmEnviar = new javax.swing.JMenu();
@@ -105,6 +106,14 @@ public class TelaInicial extends javax.swing.JFrame {
             }
         });
         jMenu1.add(jmiUsuario);
+
+        jmiFuncionario.setText("Funcionario");
+        jmiFuncionario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiFuncionarioActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jmiFuncionario);
 
         jMenuBar1.add(jMenu1);
 
@@ -195,6 +204,11 @@ public class TelaInicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jmiEnvioObjetoActionPerformed
 
+    private void jmiFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiFuncionarioActionPerformed
+        TelaCadastroFuncionario t = new TelaCadastroFuncionario();
+        t.setVisible(true);
+    }//GEN-LAST:event_jmiFuncionarioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -242,6 +256,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JMenu jmEnviar;
     private javax.swing.JMenu jmSair;
     private javax.swing.JMenuItem jmiEnvioObjeto;
+    private javax.swing.JMenuItem jmiFuncionario;
     private javax.swing.JMenuItem jmiObjeto;
     private javax.swing.JMenuItem jmiRastreioObjeto;
     private javax.swing.JMenuItem jmiSair;

@@ -8,19 +8,25 @@ package sistemaEnvios.model;
  *
  * @author mayara
  */
-public class Pessoa {
-    private int codigo;
+public abstract class Pessoa {
+    private static int codigo; 
+//colocado o static porque será criado um codigo cada vez que for estanciado uma nova pessoa
     private String nome;
     private String email;
     private int telefone;
-    private Endereco endereco;
+    private String cpf;
+    private String senha;
 
-    public Pessoa(int codigo, String nome, String email, int telefone, Endereco endereco) {
-        this.codigo = codigo;
+    public Pessoa(String nome, String email, int telefone, String cpf, String senha) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
-        this.endereco = endereco;
+        this.cpf = cpf;
+        this.senha = senha;
+    }
+
+    private void gerarCodigo(){
+        this.codigo = codigo +1;
     }
 
     public int getCodigo() {
@@ -55,19 +61,10 @@ public class Pessoa {
         this.telefone = telefone;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
-
     @Override
     public String toString() {
-        return "Pessoa{" + "codigo=" + codigo + ", nome=" + nome + ", email=" + email + ", telefone=" + telefone + ", endereco=" + endereco + '}';
+        return "Pessoa{" + "nome=" + nome + ", email=" + email + ", telefone=" + telefone + ", cpf=" + cpf + ", senha=" + senha + '}';
     }
-    
-    
-    
 }
+    
+   

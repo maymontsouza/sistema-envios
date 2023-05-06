@@ -3,20 +3,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package sistemaEnvios.model;
+import sistemaEnvios.model.Pessoa;
+import sistemaEnvios.model.Endereco;
 
 /**
  *
  * @author mayara
  */
-public abstract class Usuario {
+public class Usuario extends Pessoa {
     private String CPF;
     private String login;
     private String senha;
+    private Endereco endereco;
 
-    public Usuario(String CPF, String login, String senha) {
-        this.CPF = CPF;
-        this.login = login;
-        this.senha = senha;
+    public Usuario(String nome, String email, int telefone, String login, String senha) {
+        super(nome, email, telefone, login, senha);
     }
 
     public String getCPF() {

@@ -14,7 +14,7 @@ import java.util.List;
 public class Envio {
     private int codigo;
     private Pessoa remetente;
-    private Pessoa Destinatario;
+    private Pessoa destinatario;
     private Objeto objeto;
     
     public static List<Envio> envios = new ArrayList();
@@ -22,7 +22,7 @@ public class Envio {
     public Envio(int codigo, float frete, Pessoa remetente, Pessoa Destinatario, Objeto objeto) {
         this.codigo = codigo;
         this.remetente = remetente;
-        this.Destinatario = Destinatario;
+        this.destinatario = Destinatario;
         this.objeto = objeto;
     }
 
@@ -43,11 +43,11 @@ public class Envio {
     }
 
     public Pessoa getDestinatario() {
-        return Destinatario;
+        return destinatario;
     }
 
     public void setDestinatario(Pessoa Destinatario) {
-        this.Destinatario = Destinatario;
+        this.destinatario = Destinatario;
     }
 
     
@@ -62,11 +62,8 @@ public class Envio {
 
     @Override
     public String toString() {
-        return "Envio{" + "codigo=" + codigo + ", remetente=" + remetente + ", Destinatario=" + Destinatario + ", objeto=" + objeto + '}';
+        return "Envio{" + "codigo=" + codigo + ", remetente=" + remetente + ", Destinatario=" + destinatario + ", objeto=" + objeto + '}';
     }
-
-    
-
 
     
     
