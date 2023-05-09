@@ -15,11 +15,13 @@ public class Envio {
     private Usuario remetente;
     private Usuario destinatario;
     private Objeto objeto;
+    private String status;
 
-    public Envio(Usuario remetente, Usuario destinatario, Objeto objeto) {
+    public Envio(Usuario remetente, Usuario destinatario, Objeto objeto, String status) {
         this.remetente = remetente;
         this.destinatario = destinatario;
         this.objeto = objeto;
+        this.status = status;
     }
 
     public Usuario getRemetente() {
@@ -46,13 +48,20 @@ public class Envio {
         this.objeto = objeto;
     }
 
-    @Override
-    public String toString() {
-        return "Envio{" + "remetente=" + remetente + ", destinatario=" + destinatario + ", objeto=" + objeto + '}';
+    public String getStatus() {
+        return status;
     }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
+    @Override
+    public String toString() {
+        return "Envio{" + "remetente=" + remetente + ", destinatario=" + destinatario + ", objeto=" + objeto + ", status=" + status + '}';
+    }
 
+    
     
 
     

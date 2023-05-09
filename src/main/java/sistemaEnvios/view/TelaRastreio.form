@@ -29,7 +29,7 @@
                   <Component id="lbRastrearEnvio" min="-2" max="-2" attributes="0"/>
                   <Component id="lbCodigo" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="txtCodigoEnvio" min="-2" pref="404" max="-2" attributes="0"/>
+                      <Component id="txtCpf" min="-2" pref="404" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="btnBuscar" min="-2" pref="134" max="-2" attributes="0"/>
                   </Group>
@@ -48,7 +48,7 @@
               <Component id="lbCodigo" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtCodigoEnvio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtCpf" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -69,18 +69,21 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lbCodigo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Insira o c&#xf3;digo de envio do objeto ou CPF do destinat&#xe1;rio/remetente:*"/>
+        <Property name="text" type="java.lang.String" value="Insira o CPF do destinat&#xe1;rio/remetente:*"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtCodigoEnvio">
+    <Component class="javax.swing.JTextField" name="txtCpf">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCodigoEnvioActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCpfActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnBuscar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Buscar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>

@@ -4,6 +4,11 @@
  */
 package sistemaEnvios.view;
 
+import sistemaEnvios.dao.EnvioDAO;
+import sistemaEnvios.dao.UsuarioDAO;
+import sistemaEnvios.model.Envio;
+import sistemaEnvios.model.Usuario;
+
 /**
  *
  * @author mayara
@@ -28,7 +33,7 @@ public class TelaRastreio extends javax.swing.JFrame {
 
         lbRastrearEnvio = new javax.swing.JLabel();
         lbCodigo = new javax.swing.JLabel();
-        txtCodigoEnvio = new javax.swing.JTextField();
+        txtCpf = new javax.swing.JTextField();
         btnBuscar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtAreaDadosObjeto = new javax.swing.JTextArea();
@@ -38,15 +43,20 @@ public class TelaRastreio extends javax.swing.JFrame {
         lbRastrearEnvio.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         lbRastrearEnvio.setText("Rastrear objeto");
 
-        lbCodigo.setText("Insira o código de envio do objeto ou CPF do destinatário/remetente:*");
+        lbCodigo.setText("Insira o CPF do destinatário/remetente:*");
 
-        txtCodigoEnvio.addActionListener(new java.awt.event.ActionListener() {
+        txtCpf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCodigoEnvioActionPerformed(evt);
+                txtCpfActionPerformed(evt);
             }
         });
 
         btnBuscar.setText("Buscar");
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
 
         txtAreaDadosObjeto.setColumns(20);
         txtAreaDadosObjeto.setRows(5);
@@ -62,7 +72,7 @@ public class TelaRastreio extends javax.swing.JFrame {
                     .addComponent(lbRastrearEnvio)
                     .addComponent(lbCodigo)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtCodigoEnvio, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane2))
@@ -77,7 +87,7 @@ public class TelaRastreio extends javax.swing.JFrame {
                 .addComponent(lbCodigo)
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigoEnvio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBuscar))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -87,9 +97,18 @@ public class TelaRastreio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtCodigoEnvioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoEnvioActionPerformed
+    private void txtCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCpfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCodigoEnvioActionPerformed
+    }//GEN-LAST:event_txtCpfActionPerformed
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        String cpfUsuario = txtCpf.getText();
+        UsuarioDAO usuariodao = new UsuarioDAO();
+        Usuario usuario = usuariodao.buscarObjetos(cpfUsuario);
+        EnvioDAO enviodao = new EnvioDAO();
+        Envio envio = enviodao.buscarEnvios(usuario);
+        envio.toString();
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,6 +151,6 @@ public class TelaRastreio extends javax.swing.JFrame {
     private javax.swing.JLabel lbCodigo;
     private javax.swing.JLabel lbRastrearEnvio;
     private javax.swing.JTextArea txtAreaDadosObjeto;
-    private javax.swing.JTextField txtCodigoEnvio;
+    private javax.swing.JTextField txtCpf;
     // End of variables declaration//GEN-END:variables
 }

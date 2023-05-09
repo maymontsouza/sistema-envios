@@ -90,6 +90,8 @@ public class TelaEnvios extends javax.swing.JFrame {
         lbFreteSedex = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
+        cbStatus = new javax.swing.JComboBox<>();
+        lbStatus = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -220,6 +222,10 @@ public class TelaEnvios extends javax.swing.JFrame {
 
         lbFreteSedex.setText("Sedex");
 
+        cbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enviado", "Em trânsito", "Entregue" }));
+
+        lbStatus.setText("Status");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -289,10 +295,13 @@ public class TelaEnvios extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lbNomeDestinatario1)
-                                            .addComponent(txtNomeObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(lbNomeDestinatario1)
+                                                .addComponent(txtNomeObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(lbTituloObjeto, javax.swing.GroupLayout.Alignment.LEADING))
+                                        .addGroup(layout.createSequentialGroup()
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(layout.createSequentialGroup()
                                                     .addComponent(lbCodigoDestinatario1)
@@ -300,8 +309,13 @@ public class TelaEnvios extends javax.swing.JFrame {
                                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                                     .addComponent(txtCodigoObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addGap(18, 18, 18)
-                                                    .addComponent(btnBuscarObjeto))))
-                                        .addComponent(lbTituloObjeto, javax.swing.GroupLayout.Alignment.LEADING))
+                                                    .addComponent(btnBuscarObjeto)))
+                                            .addGap(50, 50, 50)
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(cbStatus, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addComponent(lbStatus)
+                                                    .addGap(0, 0, Short.MAX_VALUE)))))
                                     .addGap(43, 43, 43)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(txtFreteNormal, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -400,7 +414,7 @@ public class TelaEnvios extends javax.swing.JFrame {
                             .addComponent(txtLogradouroDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(66, 66, 66))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 132, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbNumeroDestinatario)
                             .addComponent(lbEstadoDestinatario)
@@ -412,7 +426,6 @@ public class TelaEnvios extends javax.swing.JFrame {
                             .addComponent(txtNumeroDestarinario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtBairroDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCidadeDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lbTituloObjeto)
@@ -421,26 +434,28 @@ public class TelaEnvios extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbCodigoDestinatario1)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lbCodigoDestinatario1)
+                                    .addComponent(lbStatus))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txtCodigoObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnBuscarObjeto))
+                                    .addComponent(btnBuscarObjeto)
+                                    .addComponent(cbStatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addComponent(lbNomeDestinatario1)
                                 .addGap(4, 4, 4)
                                 .addComponent(txtNomeObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(lbFrete)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(lbFreteNormal)
                                     .addComponent(lbFreteSedex))
                                 .addGap(5, 5, 5)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(txtFreteNormal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtFreteSedex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbFrete)
-                                .addGap(79, 79, 79)))
+                                    .addComponent(txtFreteSedex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(126, 126, 126))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -456,6 +471,7 @@ public class TelaEnvios extends javax.swing.JFrame {
        int codigoRemetente = Integer.parseInt(txtCodigoRemetente.getText());
        int codigoDestinatario = Integer.parseInt(txtCodigoDestinatario.getText());
        int codigoObjeto = Integer.parseInt(txtCodigoObjeto.getText());
+       String status = (String) cbStatus.getSelectedItem();
 
        UsuarioDAO usuariodao = new UsuarioDAO();
        ObjetoDAO objetodao = new ObjetoDAO();
@@ -467,7 +483,8 @@ public class TelaEnvios extends javax.swing.JFrame {
        Envio envio = new Envio(
                remetente,
                destinatario,
-               objeto);
+               objeto,
+               status);
        enviodao.salvarEnvio(envio);
        JOptionPane.showMessageDialog(null, "Envio realizado com sucesso!");
         enviodao.imprimirListaEnvios();
@@ -580,6 +597,7 @@ public class TelaEnvios extends javax.swing.JFrame {
     private javax.swing.JButton btnBuscarRemetente;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnSalvar;
+    private javax.swing.JComboBox<String> cbStatus;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lbBairro;
@@ -604,6 +622,7 @@ public class TelaEnvios extends javax.swing.JFrame {
     private javax.swing.JLabel lbNomeRemetente;
     private javax.swing.JLabel lbNumeroDestinatario;
     private javax.swing.JLabel lbNumeroRemetente;
+    private javax.swing.JLabel lbStatus;
     private javax.swing.JLabel lbTituloDestinatario;
     private javax.swing.JLabel lbTituloObjeto;
     private javax.swing.JLabel lbTituloRemetente;

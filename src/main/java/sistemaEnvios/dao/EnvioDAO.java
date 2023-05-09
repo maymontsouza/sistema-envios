@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import sistemaEnvios.model.Envio;
 import sistemaEnvios.model.Objeto;
+import sistemaEnvios.model.Usuario;
 
 /**
  *
@@ -31,7 +32,14 @@ public class EnvioDAO {
         }
     }
     
-    
-
-    
+     public Envio buscarEnvios(Usuario usuario) {
+         System.out.println(usuario.getCpf());
+        for (Envio envio : envios) {
+            System.out.println(envio.getRemetente().getCpf()== usuario.getCpf());
+            if(envio.getRemetente().getCpf()== usuario.getCpf()) {
+                return envio;
+            }
+        }
+        return null;
+     }   
 }
