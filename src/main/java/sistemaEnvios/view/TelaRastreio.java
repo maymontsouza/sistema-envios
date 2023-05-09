@@ -107,7 +107,11 @@ public class TelaRastreio extends javax.swing.JFrame {
         Usuario usuario = usuariodao.buscarObjetos(cpfUsuario);
         EnvioDAO enviodao = new EnvioDAO();
         Envio envio = enviodao.buscarEnvios(usuario);
-        envio.toString();
+        
+        String status = envio.getStatus();
+        String nomeObjeto = envio.getObjeto().getNome();
+        String rastreio = "Nome Objeto: "+ nomeObjeto + " |  Status: "+ status;
+        txtAreaDadosObjeto.setText(rastreio);
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**

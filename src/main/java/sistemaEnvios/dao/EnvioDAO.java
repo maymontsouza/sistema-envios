@@ -37,6 +37,7 @@ public class EnvioDAO {
         for (Envio envio : envios) {
             System.out.println(envio.getRemetente().getCpf()== usuario.getCpf());
             if(envio.getRemetente().getCpf()== usuario.getCpf()) {
+                System.out.println(envio.toString());
                 return envio;
             }
         }
