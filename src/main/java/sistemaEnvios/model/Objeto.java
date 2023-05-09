@@ -4,8 +4,6 @@
  */
 package sistemaEnvios.model;
 
-import sistemaEnvios.enums.Tipo;
-
 /**
  *
  * @author mayara
@@ -18,7 +16,6 @@ public class Objeto {
     private String largura;
     private String valor;
     private String informacoes;
-    private Tipo tipo;
     
     
 
@@ -94,13 +91,6 @@ public class Objeto {
     public String toString() {
         return "Objeto{" + "codigo=" + codigo + ", nome=" + nome + ", altura=" + altura + ", peso=" + peso + ", largura=" + largura + ", valor=" + valor + ", informacoes=" + informacoes + '}';
     }
-
-    public void add(Objeto objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
-    
-    
     
     
 }

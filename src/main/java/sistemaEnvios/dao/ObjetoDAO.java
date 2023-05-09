@@ -20,11 +20,24 @@ public class ObjetoDAO {
         objetos.add(objeto);
     }
     
-        
-    //mostrar
-    //salvar
-    //alterar
-    //excluir
-    //buscar
+    public Objeto buscarObjeto(int codigoObjeto) {
+        for (Objeto objeto : objetos) {
+            if(objeto.getCodigo()== codigoObjeto) {
+                return objeto;
+            }
+        }
+        return null;
+         
+    }
+    
+    public void imprimirListaObjetos() {
+        if(objetos.isEmpty()) {
+            System.out.println("A lista de objetos está vazia!");
+        }
+
+        for(Objeto objeto : objetos) {
+            System.out.println(objeto.toString());
+        }
+    }
     
 }

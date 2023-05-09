@@ -31,11 +31,9 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnExcluir = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
         lbCodigoUsuario = new javax.swing.JLabel();
-        txtCodigoUsuario = new javax.swing.JTextField();
-        btnAlterar = new javax.swing.JButton();
+        txtCodigoObjeto = new javax.swing.JTextField();
         lbcadastro = new javax.swing.JLabel();
         btnSalvar = new javax.swing.JButton();
         lbNomeObjeto = new javax.swing.JLabel();
@@ -47,22 +45,14 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
         txtLargura = new javax.swing.JTextField();
         txtPeso = new javax.swing.JTextField();
         txtNomeObjeto = new javax.swing.JTextField();
-        lbTipoObjeto = new javax.swing.JLabel();
-        cbTipoObjeto = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         txtValor = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtOutrasInformacoes = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        btnExcluir.setText("Excluir");
-        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExcluirActionPerformed(evt);
-            }
-        });
 
         btnLimpar.setText("Limpar");
         btnLimpar.addActionListener(new java.awt.event.ActionListener() {
@@ -73,10 +63,8 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
 
         lbCodigoUsuario.setText("Código:*");
 
-        txtCodigoUsuario.setBackground(new java.awt.Color(204, 204, 204));
-        txtCodigoUsuario.setToolTipText("");
-
-        btnAlterar.setText("Alterar");
+        txtCodigoObjeto.setBackground(new java.awt.Color(204, 204, 204));
+        txtCodigoObjeto.setToolTipText("");
 
         lbcadastro.setFont(new java.awt.Font("Liberation Mono", 1, 18)); // NOI18N
         lbcadastro.setText("Cadastro de Objeto");
@@ -112,16 +100,19 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
             }
         });
 
-        lbTipoObjeto.setText("Tipo do Objeto:*");
-
-        cbTipoObjeto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Carta", "Pacote", "Caixa" }));
-
         jLabel1.setFont(new java.awt.Font("Liberation Sans", 1, 15)); // NOI18N
         jLabel1.setText("Informações adicionais:");
 
         jLabel2.setText("Valor:");
 
         jLabel3.setText("Outras informações:");
+
+        btnBuscar.setText("Buscar");
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -130,18 +121,6 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtCodigoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbCodigoUsuario))
-                        .addGap(259, 259, 259)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lbTipoObjeto)
-                                .addGap(128, 128, 128))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(cbTipoObjeto, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(73, 73, 73))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,19 +151,21 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
                         .addGap(48, 48, 48))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbCodigoUsuario)
                             .addComponent(jLabel1)
-                            .addComponent(lbcadastro))
-                        .addContainerGap())))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(txtCodigoObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnBuscar))
+                                .addComponent(lbcadastro)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnAlterar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106))
+                .addGap(158, 158, 158)
+                .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(63, 63, 63)
+                .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,13 +173,11 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addComponent(lbcadastro)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbCodigoUsuario)
-                    .addComponent(lbTipoObjeto))
+                .addComponent(lbCodigoUsuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbTipoObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCodigoObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBuscar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lbNomeObjeto)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -232,19 +211,13 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
                     .addComponent(txtOutrasInformacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnExcluir)
                     .addComponent(btnLimpar)
-                    .addComponent(btnAlterar)
                     .addComponent(btnSalvar))
                 .addGap(58, 58, 58))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         Objeto objeto = new Objeto(
@@ -257,26 +230,40 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
         ObjetoDAO objetodao = new ObjetoDAO();
         objetodao.salvarObjeto(objeto);
         JOptionPane.showMessageDialog(null, "Objeto salvo com sucesso!");
+        objetodao.imprimirListaObjetos();
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void txtLarguraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLarguraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtLarguraActionPerformed
 
+    private void txtAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAlturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAlturaActionPerformed
+
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
         txtAltura.setText("");
-        txtCodigoUsuario.setText("");
+        txtCodigoObjeto.setText("");
         txtLargura.setText("");
         txtNomeObjeto.setText("");
         txtOutrasInformacoes.setText("");
         txtPeso.setText("");
         txtValor.setText("");
-    // End of variables declaration          
+        // End of variables declaration
     }//GEN-LAST:event_btnLimparActionPerformed
 
-    private void txtAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAlturaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAlturaActionPerformed
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+       int codigoObjeto = Integer.parseInt(txtCodigoObjeto.getText());
+        ObjetoDAO objetodao = new ObjetoDAO();
+       
+       Objeto objeto = objetodao.buscarObjeto(codigoObjeto);
+        txtAltura.setText(objeto.getAltura());
+        txtLargura.setText(objeto.getLargura());
+        txtNomeObjeto.setText(objeto.getNome());
+        txtOutrasInformacoes.setText(objeto.getInformacoes());
+        txtPeso.setText(objeto.getPeso());
+        txtValor.setText(objeto.getValor());
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -314,11 +301,9 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAlterar;
-    private javax.swing.JButton btnExcluir;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnSalvar;
-    private javax.swing.JComboBox<String> cbTipoObjeto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -328,10 +313,9 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
     private javax.swing.JLabel lbLargura;
     private javax.swing.JLabel lbNomeObjeto;
     private javax.swing.JLabel lbPeso;
-    private javax.swing.JLabel lbTipoObjeto;
     private javax.swing.JLabel lbcadastro;
     private javax.swing.JTextField txtAltura;
-    private javax.swing.JTextField txtCodigoUsuario;
+    private javax.swing.JTextField txtCodigoObjeto;
     private javax.swing.JTextField txtLargura;
     private javax.swing.JTextField txtNomeObjeto;
     private javax.swing.JTextField txtOutrasInformacoes;

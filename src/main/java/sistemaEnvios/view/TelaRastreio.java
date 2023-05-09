@@ -38,7 +38,7 @@ public class TelaRastreio extends javax.swing.JFrame {
         lbRastrearEnvio.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         lbRastrearEnvio.setText("Rastrear objeto");
 
-        lbCodigo.setText("Insira o código de envio do objeto ou CPF do destinatário:*");
+        lbCodigo.setText("Insira o código de envio do objeto ou CPF do destinatário/remetente:*");
 
         txtCodigoEnvio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,14 +73,14 @@ public class TelaRastreio extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(lbRastrearEnvio)
-                .addGap(53, 53, 53)
+                .addGap(18, 18, 18)
                 .addComponent(lbCodigo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCodigoEnvio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnBuscar))
-                .addGap(31, 31, 31)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 

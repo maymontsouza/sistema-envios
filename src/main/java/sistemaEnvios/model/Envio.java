@@ -12,49 +12,31 @@ import java.util.List;
  * @author mayara
  */
 public class Envio {
-    private int codigo;
-    private Pessoa remetente;
-    private Pessoa destinatario;
+    private Usuario remetente;
+    private Usuario destinatario;
     private Objeto objeto;
-    
-    public static List<Envio> envios = new ArrayList();
 
-    public Envio(int codigo, float frete, Pessoa remetente, Pessoa Destinatario, Objeto objeto) {
-        this.codigo = codigo;
+    public Envio(Usuario remetente, Usuario destinatario, Objeto objeto) {
         this.remetente = remetente;
-        this.destinatario = Destinatario;
+        this.destinatario = destinatario;
         this.objeto = objeto;
     }
 
-    public Envio() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public int getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
-
-    public Pessoa getRemetente() {
+    public Usuario getRemetente() {
         return remetente;
     }
 
-    public void setRemetente(Pessoa remetente) {
+    public void setRemetente(Usuario remetente) {
         this.remetente = remetente;
     }
 
-    public Pessoa getDestinatario() {
+    public Usuario getDestinatario() {
         return destinatario;
     }
 
-    public void setDestinatario(Pessoa Destinatario) {
-        this.destinatario = Destinatario;
+    public void setDestinatario(Usuario destinatario) {
+        this.destinatario = destinatario;
     }
-
-    
 
     public Objeto getObjeto() {
         return objeto;
@@ -66,8 +48,12 @@ public class Envio {
 
     @Override
     public String toString() {
-        return "Envio{" + "codigo=" + codigo + ", remetente=" + remetente + ", Destinatario=" + destinatario + ", objeto=" + objeto + '}';
+        return "Envio{" + "remetente=" + remetente + ", destinatario=" + destinatario + ", objeto=" + objeto + '}';
     }
+
+
+
+    
 
     
     

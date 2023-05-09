@@ -21,11 +21,17 @@ public class EnvioDAO {
         envios.add(envio);
     }
     
+    public void imprimirListaEnvios() {
+        if(envios.isEmpty()) {
+            System.out.println("A lista de envios está vazia!");
+        }
+
+        for(Envio envio : envios) {
+            System.out.println(envio.toString());
+        }
+    }
     
-    //mostrar
-    //salvar
-    //alterar
-    //excluir
-    //buscar
+    
+
     
 }

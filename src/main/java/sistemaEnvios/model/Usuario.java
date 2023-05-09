@@ -4,53 +4,82 @@
  */
 package sistemaEnvios.model;
 import sistemaEnvios.model.Pessoa;
-import sistemaEnvios.model.Endereco;
 
 /**
  *
  * @author mayara
  */
 public class Usuario extends Pessoa {
-    private String CPF;
-    private String login;
-    private String senha;
-    private Endereco endereco;
+    private String Logradouro;
+    private String CEP;
+    private String Cidade;
+    private String Bairro;
+    private String Estado;
+    private String Numero;
 
-    public Usuario(String nome, String email, int telefone, String login, String senha) {
-        super(nome, email, telefone, login, senha);
+    public Usuario(String Logradouro, String CEP, String Cidade, String Bairro, String Estado, String Numero, String nome, String email, int telefone, String cpf, String senha) {
+        super(nome, email, telefone, cpf, senha);
+        this.Logradouro = Logradouro;
+        this.CEP = CEP;
+        this.Cidade = Cidade;
+        this.Bairro = Bairro;
+        this.Estado = Estado;
+        this.Numero = Numero;
     }
 
-    public String getCPF() {
-        return CPF;
+    public String getLogradouro() {
+        return Logradouro;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setLogradouro(String Logradouro) {
+        this.Logradouro = Logradouro;
     }
 
-    public String getLogin() {
-        return login;
+    public String getCEP() {
+        return CEP;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setCEP(String CEP) {
+        this.CEP = CEP;
     }
 
-    public String getSenha() {
-        return senha;
+    public String getCidade() {
+        return Cidade;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setCidade(String Cidade) {
+        this.Cidade = Cidade;
+    }
+
+    public String getBairro() {
+        return Bairro;
+    }
+
+    public void setBairro(String Bairro) {
+        this.Bairro = Bairro;
+    }
+
+    public String getEstado() {
+        return Estado;
+    }
+
+    public void setEstado(String Estado) {
+        this.Estado = Estado;
+    }
+
+    public String getNumero() {
+        return Numero;
+    }
+
+    public void setNumero(String Numero) {
+        this.Numero = Numero;
     }
 
     @Override
     public String toString() {
-        return "Usuario{" + "CPF=" + CPF + ", login=" + login + ", senha=" + senha + '}';
+        return "Usuario{" + "Logradouro=" + Logradouro + ", CEP=" + CEP + ", Cidade=" + Cidade + ", Bairro=" + Bairro + ", Estado=" + Estado + ", Numero=" + Numero + '}';
     }
-    
-    
-        
+
     
     
 }

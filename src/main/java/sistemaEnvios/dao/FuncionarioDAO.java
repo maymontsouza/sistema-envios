@@ -15,8 +15,6 @@ import sistemaEnvios.model.Funcionario;
 public class FuncionarioDAO {
 
     private static final List<Funcionario> funcionarios = new ArrayList();
-    //static onde quer que estancie os dados vão permanecer sempre, 
-    //caso não seja static ele irá resetar os dados sempre que for chamado.
 
     public void salvarFuncionario(Funcionario funcionario) {
         funcionarios.add(funcionario);
@@ -30,6 +28,16 @@ public class FuncionarioDAO {
         }
         return null;
          
+    }
+    
+    public void imprimirListaFuncionarios() {
+        if(funcionarios.isEmpty()) {
+            System.out.println("A lista de funcionários está vazia!");
+        }
+
+        for(Funcionario funcionario : funcionarios) {
+            System.out.println(funcionario.toString());
+        }
     }
 
 }
