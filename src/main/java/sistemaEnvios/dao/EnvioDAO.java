@@ -33,11 +33,8 @@ public class EnvioDAO {
     }
     
      public Envio buscarEnvios(Usuario usuario) {
-         System.out.println(usuario.getCpf());
         for (Envio envio : envios) {
-            System.out.println(envio.getRemetente().getCpf()== usuario.getCpf());
-            if(envio.getRemetente().getCpf()== usuario.getCpf()) {
-                System.out.println(envio.toString());
+            if(envio.getRemetente().getCpf() == usuario.getCpf() || envio.getDestinatario().getCpf() == usuario.getCpf())  {
                 return envio;
             }
         }
