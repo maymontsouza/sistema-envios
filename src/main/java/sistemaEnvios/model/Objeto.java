@@ -22,7 +22,7 @@ public class Objeto {
     
     
 
-    public Objeto(int codigo, String nome, String altura, String peso, String largura, String valor, String informacoes) {
+    public Objeto(String nome, String altura, String peso, String largura, String valor, String informacoes) {
         this.codigo = codigo;
         this.nome = nome;
         this.altura = altura;
@@ -93,6 +93,10 @@ public class Objeto {
     @Override
     public String toString() {
         return "Objeto{" + "codigo=" + codigo + ", nome=" + nome + ", altura=" + altura + ", peso=" + peso + ", largura=" + largura + ", valor=" + valor + ", informacoes=" + informacoes + '}';
+    }
+
+    public void add(Objeto objeto) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     

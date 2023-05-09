@@ -4,6 +4,14 @@
  */
 package sistemaEnvios.view;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+import sistemaEnvios.dao.EnvioDAO;
+import sistemaEnvios.model.Envio;
+import sistemaEnvios.model.Pessoa;
+
+
 /**
  *
  * @author mayara
@@ -406,7 +414,15 @@ public class TelaEnvios extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        // TODO add your handling code here:
+        Envio envio = new Envio(
+                txtCodigoEnvio.getText(),
+                txtFrete.getText(),
+                txtCodigoRemetente.getText(),
+                txtCodigoDestinatario.getText(),
+                txtCodigoObjeto.getText());
+        EnvioDAO enviodao = new EnvioDAO();
+        enviodao.salvarEnvio(envio);
+        JOptionPane.showMessageDialog(null, "Objeto salvo com sucesso!");      
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void txtCodigoRemetenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoRemetenteActionPerformed

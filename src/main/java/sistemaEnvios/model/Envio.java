@@ -26,6 +26,10 @@ public class Envio {
         this.objeto = objeto;
     }
 
+    public Envio() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public int getCodigo() {
         return codigo;
     }

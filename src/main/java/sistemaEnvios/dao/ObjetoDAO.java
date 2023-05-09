@@ -14,6 +14,17 @@ import sistemaEnvios.model.Objeto;
  */
 public class ObjetoDAO {
     
-    private static List<Objeto> objetos = new ArrayList<>();
+    private static final List<Objeto> objetos = new ArrayList<>();
+    
+    public void salvarObjeto(Objeto objeto) {
+        objetos.add(objeto);
+    }
+    
+        
+    //mostrar
+    //salvar
+    //alterar
+    //excluir
+    //buscar
     
 }

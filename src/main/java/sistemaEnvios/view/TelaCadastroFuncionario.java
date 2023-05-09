@@ -8,6 +8,7 @@ import java.awt.Panel;
 import javax.swing.JOptionPane;
 import sistemaEnvios.dao.FuncionarioDAO;
 import sistemaEnvios.model.Funcionario;
+import sistemaEnvios.model.Pessoa;
 
 /**
  *
@@ -65,13 +66,14 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
         txtSenha = new javax.swing.JTextField();
         txtNome = new javax.swing.JTextField();
         jLnome1 = new javax.swing.JLabel();
-        txtCodigoUsuario = new javax.swing.JTextField();
+        txtCodigoFuncionario = new javax.swing.JTextField();
         lbCodigo = new javax.swing.JLabel();
         lbNivelAcesso = new javax.swing.JLabel();
         cbNivelAcesso = new javax.swing.JComboBox();
         lbTituloSistemaEnvios = new javax.swing.JLabel();
         txtTelefone = new javax.swing.JTextField();
         lbTelefone = new javax.swing.JLabel();
+        btnBuscar = new javax.swing.JButton();
 
         jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -234,9 +236,9 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
 
         jLnome1.setText("Nome:* ");
 
-        txtCodigoUsuario.addActionListener(new java.awt.event.ActionListener() {
+        txtCodigoFuncionario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCodigoUsuarioActionPerformed(evt);
+                txtCodigoFuncionarioActionPerformed(evt);
             }
         });
 
@@ -250,6 +252,13 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
         lbTituloSistemaEnvios.setText("Cadastro de Funcionário");
 
         lbTelefone.setText("Telefone:");
+
+        btnBuscar.setText("Buscar");
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -293,7 +302,10 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCodigoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtCodigoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28)
+                                .addComponent(btnBuscar)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbNivelAcesso, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -312,8 +324,9 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
                     .addComponent(lbNivelAcesso))
                 .addGap(2, 2, 2)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbNivelAcesso))
+                    .addComponent(txtCodigoFuncionario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbNivelAcesso)
+                    .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLnome1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(2, 2, 2)
@@ -372,7 +385,7 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
             txtCPF.setText("");
-            txtCodigoUsuario.setText("");
+            txtCodigoFuncionario.setText("");
             txtEmail.setText("");
             txtNome.setText("");
             txtSenha.setText("");
@@ -408,14 +421,31 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSenhaActionPerformed
 
-    private void txtCodigoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoUsuarioActionPerformed
+    private void txtCodigoFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoFuncionarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCodigoUsuarioActionPerformed
+    }//GEN-LAST:event_txtCodigoFuncionarioActionPerformed
 
     private void btnAlterarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarFuncionarioActionPerformed
     FuncionarioDAO funcionariodao = new FuncionarioDAO();
-    funcionariodao.mostrarFuncionarios();
+    //funcionariodao.buscarFuncionarios();
     }//GEN-LAST:event_btnAlterarFuncionarioActionPerformed
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+         int codigoFuncionario = Integer.parseInt(txtCodigoFuncionario.getText());
+         FuncionarioDAO funcionariodao = new FuncionarioDAO();
+        Funcionario funcionario = new Funcionario(
+                "",
+                "",
+                0,
+                "",
+                "");
+         funcionario = funcionariodao.buscarFuncionario(codigoFuncionario);
+            txtCPF.setText("197898787");
+            txtEmail.setText(funcionario.getEmail());
+            txtNome.setText(funcionario.getNome());
+            txtSenha.setText("11231321");
+            txtTelefone.setText("1");
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -455,6 +485,7 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField T_codigo;
     private javax.swing.JButton btnAlterarFuncionario;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnExcluirFuncionario;
     private javax.swing.JButton btnLimparFuncionario;
     private javax.swing.JButton btnSalvarFuncionario;
@@ -489,7 +520,7 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
     private javax.swing.JLabel lbTituloSistemaEnvios;
     private javax.swing.JLabel lnEmail;
     private javax.swing.JTextField txtCPF;
-    private javax.swing.JTextField txtCodigoUsuario;
+    private javax.swing.JTextField txtCodigoFuncionario;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtSenha;

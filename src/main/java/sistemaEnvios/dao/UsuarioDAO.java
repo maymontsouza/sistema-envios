@@ -16,6 +16,13 @@ public class UsuarioDAO {
     
     private static List<Pessoa> usuarios = new ArrayList<>();
     
+        
+    //mostrar
+    //salvar
+    //alterar
+    //excluir
+    //buscar
+    
     
     
 }

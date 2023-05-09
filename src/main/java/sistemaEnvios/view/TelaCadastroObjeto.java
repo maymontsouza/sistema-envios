@@ -4,6 +4,11 @@
  */
 package sistemaEnvios.view;
 
+import java.awt.Panel;
+import javax.swing.JOptionPane;
+import sistemaEnvios.dao.ObjetoDAO;
+import sistemaEnvios.model.Objeto;
+
 /**
  *
  * @author mayara
@@ -242,7 +247,16 @@ public class TelaCadastroObjeto extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExcluirActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        // TODO add your handling code here:
+        Objeto objeto = new Objeto(
+                txtNomeObjeto.getText(),
+                txtAltura.getText(),
+                txtPeso.getText(), 
+                txtLargura.getText(),
+                txtValor.getText(),
+                txtOutrasInformacoes.getText());
+        ObjetoDAO objetodao = new ObjetoDAO();
+        objetodao.salvarObjeto(objeto);
+        JOptionPane.showMessageDialog(null, "Objeto salvo com sucesso!");
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void txtLarguraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLarguraActionPerformed

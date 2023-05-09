@@ -4,10 +4,28 @@
  */
 package sistemaEnvios.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+import sistemaEnvios.model.Envio;
+import sistemaEnvios.model.Objeto;
+
 /**
  *
  * @author mayara
  */
 public class EnvioDAO {
+    
+     private static final List<Envio> envios = new ArrayList<>();
+    
+    public void salvarEnvio(Envio envio) {
+        envios.add(envio);
+    }
+    
+    
+    //mostrar
+    //salvar
+    //alterar
+    //excluir
+    //buscar
     
 }
