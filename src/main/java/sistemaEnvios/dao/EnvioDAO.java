@@ -34,7 +34,7 @@ public class EnvioDAO {
     
      public Envio buscarEnvios(Usuario usuario) {
         for (Envio envio : envios) {
-            if(envio.getRemetente().getCpf() == usuario.getCpf() || envio.getDestinatario().getCpf() == usuario.getCpf())  {
+            if(envio.getRemetente().getCpf().equals(usuario.getCpf()) || envio.getDestinatario().getCpf().equals(usuario.getCpf()))  {
                 return envio;
             }
         }

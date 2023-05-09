@@ -42,10 +42,8 @@ public class UsuarioDAO {
     }
     
      public Usuario buscarObjetos(String cpfUsuario) {
-         System.out.println(cpfUsuario);
         for (Usuario usuario : usuarios) {
             if(usuario.getCpf().equals(cpfUsuario)) {
-                System.out.println(usuario.toString());
                 return usuario;
             }
         }
