@@ -55,6 +55,11 @@ public class Envio {
     public void setStatus(String status) {
         this.status = status;
     }
+    
+    
+    public String statusEnvio(){
+        return String.format("Nome Objeto: %s |  Status: %s", objeto.getNome() , status);
+    }
 
     @Override
     public String toString() {

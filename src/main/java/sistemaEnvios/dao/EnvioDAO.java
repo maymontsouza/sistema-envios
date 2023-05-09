@@ -32,13 +32,25 @@ public class EnvioDAO {
         }
     }
     
-     public Envio buscarEnvios(Usuario usuario) {
+     /* public Envio buscarEnvios(Usuario usuario) {
         for (Envio envio : envios) {
             if(envio.getRemetente().getCpf().equals(usuario.getCpf()) || envio.getDestinatario().getCpf().equals(usuario.getCpf()))  {
                 return envio;
             }
         }
         return null;
-     }   
+     }   */
+     
+     public List<Envio> buscarEnvios(String CPF) {
+        ArrayList<Envio> itensLocalizados = new ArrayList<>();
+        
+        for (Envio envio : envios) {
+            if (envio.getDestinatario().getCpf().equals(CPF)  || envio.getRemetente().getCpf().equals(CPF)) {
+                itensLocalizados.add(envio);
+            }
+        }
+        
+        return itensLocalizados;
+    }
      
 }

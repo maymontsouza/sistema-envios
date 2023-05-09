@@ -8,6 +8,9 @@ import sistemaEnvios.dao.EnvioDAO;
 import sistemaEnvios.dao.UsuarioDAO;
 import sistemaEnvios.model.Envio;
 import sistemaEnvios.model.Usuario;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  *
@@ -102,16 +105,17 @@ public class TelaRastreio extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCpfActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        String cpfUsuario = txtCpf.getText();
-        UsuarioDAO usuariodao = new UsuarioDAO();
-        Usuario usuario = usuariodao.buscarObjetos(cpfUsuario);
-        EnvioDAO enviodao = new EnvioDAO();
-        Envio envio = enviodao.buscarEnvios(usuario);
+        String CPF = txtCpf.getText();
         
-        String status = envio.getStatus();
-        String nomeObjeto = envio.getObjeto().getNome();
-        String rastreio = "Nome Objeto: "+ nomeObjeto + " |  Status: "+ status;
-        txtAreaDadosObjeto.setText(rastreio);
+        EnvioDAO envioDAO = new EnvioDAO();
+        List<Envio> itensLocalizados = envioDAO.buscarEnvios(CPF);
+        
+        StringBuilder sb = new StringBuilder(); //montar uma string concatena 
+        for (Envio itensLocalizado : itensLocalizados) {
+            sb.append(itensLocalizado.statusEnvio() + "\n");
+        }
+        
+        txtAreaDadosObjeto.setText(sb.toString());
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**

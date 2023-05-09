@@ -9,7 +9,7 @@ package sistemaEnvios.model;
  * @author mayara
  */
 public class Objeto {
-    private int codigo;
+    private final int codigo;
     private String nome;
     private String altura;
     private String peso;
@@ -20,7 +20,7 @@ public class Objeto {
     
 
     public Objeto(String nome, String altura, String peso, String largura, String valor, String informacoes) {
-        this.codigo = codigo;
+        this.codigo = ++contadorObjeto;
         this.nome = nome;
         this.altura = altura;
         this.peso = peso;
@@ -29,15 +29,12 @@ public class Objeto {
         this.informacoes = informacoes;
     }
     
+    private static int contadorObjeto=0;
     
-
     public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
 
     public String getNome() {
         return nome;
