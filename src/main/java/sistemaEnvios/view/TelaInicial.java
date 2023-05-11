@@ -45,11 +45,12 @@ public class TelaInicial extends javax.swing.JFrame {
         jmiRastreioObjeto = new javax.swing.JMenuItem();
         jmEnviar = new javax.swing.JMenu();
         jmiEnvioObjeto = new javax.swing.JMenuItem();
-        jmSair = new javax.swing.JMenu();
-        jmiSair = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
         miEnvio = new javax.swing.JMenuItem();
         miFrete = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jmSair = new javax.swing.JMenu();
+        jmiSair = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -148,19 +149,6 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuBar1.add(jmEnviar);
 
-        jmSair.setText("Sair");
-
-        jmiSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jmiSair.setText("Sair");
-        jmiSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmiSairActionPerformed(evt);
-            }
-        });
-        jmSair.add(jmiSair);
-
-        jMenuBar1.add(jmSair);
-
         jMenu5.setText("Relatório");
 
         miEnvio.setText("Relatório Envio");
@@ -174,7 +162,23 @@ public class TelaInicial extends javax.swing.JFrame {
         miFrete.setText("Relatório Fretes");
         jMenu5.add(miFrete);
 
+        jMenuItem2.setText("Relatório Rementes Atendidos");
+        jMenu5.add(jMenuItem2);
+
         jMenuBar1.add(jMenu5);
+
+        jmSair.setText("Sair");
+
+        jmiSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jmiSair.setText("Sair");
+        jmiSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiSairActionPerformed(evt);
+            }
+        });
+        jmSair.add(jmiSair);
+
+        jMenuBar1.add(jmSair);
 
         setJMenuBar(jMenuBar1);
 
@@ -280,6 +284,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JMenu jmEnviar;
     private javax.swing.JMenu jmSair;

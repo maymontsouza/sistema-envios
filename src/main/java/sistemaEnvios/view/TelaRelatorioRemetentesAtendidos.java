@@ -4,6 +4,13 @@
  */
 package sistemaEnvios.view;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import sistemaEnvios.dao.EnvioDAO;
+import sistemaEnvios.model.Envio;
+import sistemaEnvios.model.Usuario;
+
 /**
  *
  * @author mayara
@@ -26,19 +33,65 @@ public class TelaRelatorioRemetentesAtendidos extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btGerar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        taRelatorio = new javax.swing.JTextArea();
+
+        btGerar.setText("Gerar");
+        btGerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGerarActionPerformed(evt);
+            }
+        });
+
+        taRelatorio.setColumns(20);
+        taRelatorio.setRows(5);
+        jScrollPane1.setViewportView(taRelatorio);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btGerar)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 602, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btGerar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btGerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGerarActionPerformed
+        EnvioDAO envioDAO = new EnvioDAO();
+        List<Envio> envios = envioDAO.selectAll();
+        
+        Set<Usuario> remetentes = new HashSet<>();
+
+        for (Envio envio : envios) {
+            remetentes.add(envio.getRemetente());
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        
+        for (Usuario remetente : remetentes) {
+            sb.append("Nome: ").append(remetente.getNome()).append("CPF: ").append(remetente.getCpf()).append("\n");
+        }
+        
+    }//GEN-LAST:event_btGerarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btGerar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea taRelatorio;
     // End of variables declaration//GEN-END:variables
 }

@@ -35,6 +35,7 @@ public class TelaRelatorioRastreio extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        bgOpcoes = new javax.swing.ButtonGroup();
         rbObjeto = new javax.swing.JRadioButton();
         rbRemetente = new javax.swing.JRadioButton();
         rbDestinatario = new javax.swing.JRadioButton();
@@ -55,10 +56,13 @@ public class TelaRelatorioRastreio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        bgOpcoes.add(rbObjeto);
         rbObjeto.setText("Objeto");
 
+        bgOpcoes.add(rbRemetente);
         rbRemetente.setText("Remetente");
 
+        bgOpcoes.add(rbDestinatario);
         rbDestinatario.setText("Destinatário");
 
         btGerarRelatorio.setText("Gerar");
@@ -189,6 +193,7 @@ public class TelaRelatorioRastreio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bgOpcoes;
     private javax.swing.JButton btGerarRelatorio;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
