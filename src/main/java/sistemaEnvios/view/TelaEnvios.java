@@ -11,6 +11,9 @@ import sistemaEnvios.dao.EnvioDAO;
 import sistemaEnvios.dao.ObjetoDAO;
 import sistemaEnvios.dao.UsuarioDAO;
 import sistemaEnvios.model.Envio;
+import sistemaEnvios.model.Frete;
+import sistemaEnvios.model.FreteNormal;
+import sistemaEnvios.model.FreteSedex;
 import sistemaEnvios.model.Objeto;
 import sistemaEnvios.model.Pessoa;
 import sistemaEnvios.model.Usuario;
@@ -57,7 +60,6 @@ public class TelaEnvios extends javax.swing.JFrame {
         txtCodigoObjeto = new javax.swing.JTextField();
         lbCodigoDestinatario1 = new javax.swing.JLabel();
         lbFrete = new javax.swing.JLabel();
-        txtFreteNormal = new javax.swing.JTextField();
         txtCidadeRemetente = new javax.swing.JTextField();
         lbBairro = new javax.swing.JLabel();
         txtBairroRemetente = new javax.swing.JTextField();
@@ -85,13 +87,12 @@ public class TelaEnvios extends javax.swing.JFrame {
         btnBuscarRemetente = new javax.swing.JButton();
         btnBuscarDestinatario = new javax.swing.JButton();
         btnBuscarObjeto = new javax.swing.JButton();
-        txtFreteSedex = new javax.swing.JTextField();
-        lbFreteNormal = new javax.swing.JLabel();
-        lbFreteSedex = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         cbStatus = new javax.swing.JComboBox<>();
         lbStatus = new javax.swing.JLabel();
+        cbTipoFrete = new javax.swing.JComboBox<>();
+        txtValorFrete = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -218,13 +219,16 @@ public class TelaEnvios extends javax.swing.JFrame {
             }
         });
 
-        lbFreteNormal.setText("Normal");
-
-        lbFreteSedex.setText("Sedex");
-
         cbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Enviado", "Em trânsito", "Entregue" }));
 
         lbStatus.setText("Status");
+
+        cbTipoFrete.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal", "Sedex" }));
+        cbTipoFrete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbTipoFreteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -317,13 +321,11 @@ public class TelaEnvios extends javax.swing.JFrame {
                                                 .addGap(0, 0, Short.MAX_VALUE)))))
                                 .addGap(43, 43, 43)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtFreteNormal, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lbFreteNormal)
-                                    .addComponent(lbFrete))
-                                .addGap(48, 48, 48)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lbFreteSedex)
-                                    .addComponent(txtFreteSedex, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(lbFrete)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(cbTipoFrete, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(37, 37, 37)
+                                        .addComponent(txtValorFrete, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lbCidadeDestinatario)
@@ -413,7 +415,7 @@ public class TelaEnvios extends javax.swing.JFrame {
                             .addComponent(txtLogradouroDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(66, 66, 66))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 132, Short.MAX_VALUE)
+                        .addGap(0, 126, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbNumeroDestinatario)
                             .addComponent(lbEstadoDestinatario)
@@ -425,7 +427,6 @@ public class TelaEnvios extends javax.swing.JFrame {
                             .addComponent(txtNumeroDestarinario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtBairroDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtCidadeDestinatario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(12, 12, 12)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbTituloObjeto)
@@ -448,14 +449,11 @@ public class TelaEnvios extends javax.swing.JFrame {
                                 .addComponent(txtNomeObjeto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lbFrete)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lbFreteNormal)
-                                    .addComponent(lbFreteSedex))
-                                .addGap(5, 5, 5)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtFreteNormal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtFreteSedex, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtValorFrete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cbTipoFrete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(17, 17, 17)))
                         .addGap(126, 126, 126))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -480,11 +478,22 @@ public class TelaEnvios extends javax.swing.JFrame {
        Usuario remetente = usuariodao.buscarUsuario(codigoRemetente);
        Usuario destinatario = usuariodao.buscarUsuario(codigoDestinatario);
        Objeto objeto = objetodao.buscarObjeto(codigoObjeto);
+       
+       float valorFrete = 0;
+        if (cbTipoFrete.getSelectedItem().toString().equals("Normal")) {
+            Frete frete = new FreteNormal();
+            valorFrete = frete.calculaFrete();
+        } else if (cbTipoFrete.getSelectedItem().toString().equals("Sedex")) {
+            Frete frete = new FreteSedex();
+            valorFrete = frete.calculaFrete();
+        }
+       
        Envio envio = new Envio(
                remetente,
                destinatario,
                objeto,
-               status);
+               status,
+               valorFrete);
        enviodao.salvarEnvio(envio);
        JOptionPane.showMessageDialog(null, "Envio realizado com sucesso!");
         enviodao.imprimirListaEnvios();
@@ -497,8 +506,24 @@ public class TelaEnvios extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCodigoRemetenteActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
-
-// TODO add your handling code here:
+    txtBairroDestinatario.setText("");
+    txtBairroRemetente.setText("");
+    txtCepDestinatario.setText("");
+    txtCepRemetente.setText("");
+    txtCidadeDestinatario.setText("");
+    txtCidadeRemetente.setText("");
+    txtCodigoDestinatario.setText("");
+    txtCodigoObjeto.setText("");
+    txtCodigoRemetente.setText("");
+    txtEstadoDestinatario.setText("");
+    txtEstadoRemetente.setText("");
+    txtLogradouroDestinatario.setText("");
+    txtLogradouroRemetente.setText("");
+    txtNomeDestinatario.setText("");
+    txtNomeObjeto.setText("");
+    txtNomeRemetente.setText("");
+    txtNumeroDestarinario.setText("");
+    txtNumeroRemetente.setText("");
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void txtNumeroRemetenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumeroRemetenteActionPerformed
@@ -556,6 +581,10 @@ public class TelaEnvios extends javax.swing.JFrame {
          txtNumeroDestarinario.setText(usuario.getNumero());
     }//GEN-LAST:event_btnBuscarDestinatarioActionPerformed
 
+    private void cbTipoFreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTipoFreteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbTipoFreteActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -598,6 +627,7 @@ public class TelaEnvios extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnSalvar;
     private javax.swing.JComboBox<String> cbStatus;
+    private javax.swing.JComboBox<String> cbTipoFrete;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lbBairro;
@@ -613,8 +643,6 @@ public class TelaEnvios extends javax.swing.JFrame {
     private javax.swing.JLabel lbEstadoDestinatario;
     private javax.swing.JLabel lbEstadoRemetente;
     private javax.swing.JLabel lbFrete;
-    private javax.swing.JLabel lbFreteNormal;
-    private javax.swing.JLabel lbFreteSedex;
     private javax.swing.JLabel lbLogradouro;
     private javax.swing.JLabel lbLogradouro1;
     private javax.swing.JLabel lbNomeDestinatario;
@@ -637,8 +665,6 @@ public class TelaEnvios extends javax.swing.JFrame {
     private javax.swing.JTextField txtCodigoRemetente;
     private javax.swing.JTextField txtEstadoDestinatario;
     private javax.swing.JTextField txtEstadoRemetente;
-    private javax.swing.JTextField txtFreteNormal;
-    private javax.swing.JTextField txtFreteSedex;
     private javax.swing.JTextField txtLogradouroDestinatario;
     private javax.swing.JTextField txtLogradouroRemetente;
     private javax.swing.JTextField txtNomeDestinatario;
@@ -646,5 +672,6 @@ public class TelaEnvios extends javax.swing.JFrame {
     private javax.swing.JTextField txtNomeRemetente;
     private javax.swing.JTextField txtNumeroDestarinario;
     private javax.swing.JTextField txtNumeroRemetente;
+    private javax.swing.JTextField txtValorFrete;
     // End of variables declaration//GEN-END:variables
 }

@@ -9,5 +9,10 @@ package sistemaEnvios.model;
  * @author mayara
  */
 public class FreteNormal implements Frete {
+
+    @Override
+    public float calculaFrete() {
+        return (float) 10.00;
+    }
     
 }

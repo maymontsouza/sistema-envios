@@ -10,7 +10,6 @@ package sistemaEnvios.model;
  */
 public abstract class Pessoa {
     private final int codigo; 
-//colocado o static porque será criado um codigo cada vez que for estanciado uma nova pessoa
     private String nome;
     private String email;
     private int telefone;

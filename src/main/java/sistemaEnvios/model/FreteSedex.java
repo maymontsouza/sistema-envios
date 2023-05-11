@@ -9,5 +9,10 @@ package sistemaEnvios.model;
  * @author mayara
  */
 public class FreteSedex implements Frete {
-    
+
+    @Override
+    public float calculaFrete() {
+        return (float) 30.00;
+    }
+
 }

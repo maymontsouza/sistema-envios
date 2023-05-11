@@ -110,7 +110,7 @@ public class TelaRastreio extends javax.swing.JFrame {
         EnvioDAO envioDAO = new EnvioDAO();
         List<Envio> itensLocalizados = envioDAO.buscarEnvios(CPF);
         
-        StringBuilder sb = new StringBuilder(); //montar uma string concatena 
+        StringBuilder sb = new StringBuilder();
         for (Envio itensLocalizado : itensLocalizados) {
             sb.append(itensLocalizado.statusEnvio() + "\n");
         }

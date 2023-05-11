@@ -47,6 +47,9 @@ public class TelaInicial extends javax.swing.JFrame {
         jmiEnvioObjeto = new javax.swing.JMenuItem();
         jmSair = new javax.swing.JMenu();
         jmiSair = new javax.swing.JMenuItem();
+        jMenu5 = new javax.swing.JMenu();
+        miEnvio = new javax.swing.JMenuItem();
+        miFrete = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -58,11 +61,13 @@ public class TelaInicial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
         lbTituloPainel.setFont(new java.awt.Font("Liberation Sans", 1, 60)); // NOI18N
+        lbTituloPainel.setForeground(new java.awt.Color(0, 0, 51));
         lbTituloPainel.setText("Sistema de Envios");
 
+        lbSubtituloPainel.setForeground(new java.awt.Color(0, 0, 51));
         lbSubtituloPainel.setText("Cadastrar, enviar e rastrear objetos");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -88,6 +93,8 @@ public class TelaInicial extends javax.swing.JFrame {
                 .addComponent(lbSubtituloPainel)
                 .addContainerGap(145, Short.MAX_VALUE))
         );
+
+        jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
 
         jMenu1.setText("Cadastro");
 
@@ -154,6 +161,21 @@ public class TelaInicial extends javax.swing.JFrame {
 
         jMenuBar1.add(jmSair);
 
+        jMenu5.setText("Relatório");
+
+        miEnvio.setText("Relatório Envio");
+        miEnvio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miEnvioActionPerformed(evt);
+            }
+        });
+        jMenu5.add(miEnvio);
+
+        miFrete.setText("Relatório Fretes");
+        jMenu5.add(miFrete);
+
+        jMenuBar1.add(jMenu5);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -209,6 +231,11 @@ public class TelaInicial extends javax.swing.JFrame {
         t.setVisible(true);
     }//GEN-LAST:event_jmiFuncionarioActionPerformed
 
+    private void miEnvioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miEnvioActionPerformed
+        TelaRelatorioRastreio telaRelatorioRastreio = new TelaRelatorioRastreio();
+        telaRelatorioRastreio.setVisible(true);
+    }//GEN-LAST:event_miEnvioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -249,6 +276,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
@@ -263,5 +291,7 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmiUsuario;
     private javax.swing.JLabel lbSubtituloPainel;
     private javax.swing.JLabel lbTituloPainel;
+    private javax.swing.JMenuItem miEnvio;
+    private javax.swing.JMenuItem miFrete;
     // End of variables declaration//GEN-END:variables
 }

@@ -10,4 +10,6 @@ package sistemaEnvios.model;
  */
 public interface Frete {
     
+    public float calculaFrete();
+    
 }

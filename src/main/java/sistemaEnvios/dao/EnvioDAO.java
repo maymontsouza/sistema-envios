@@ -31,15 +31,6 @@ public class EnvioDAO {
             System.out.println(envio.toString());
         }
     }
-    
-     /* public Envio buscarEnvios(Usuario usuario) {
-        for (Envio envio : envios) {
-            if(envio.getRemetente().getCpf().equals(usuario.getCpf()) || envio.getDestinatario().getCpf().equals(usuario.getCpf()))  {
-                return envio;
-            }
-        }
-        return null;
-     }   */
      
      public List<Envio> buscarEnvios(String CPF) {
         ArrayList<Envio> itensLocalizados = new ArrayList<>();
@@ -51,6 +42,10 @@ public class EnvioDAO {
         }
         
         return itensLocalizados;
+    }
+
+    public List<Envio> selectAll() {
+        return envios;
     }
      
 }
