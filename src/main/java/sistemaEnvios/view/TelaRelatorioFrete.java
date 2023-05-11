@@ -85,10 +85,10 @@ public class TelaRelatorioFrete extends javax.swing.JFrame {
         EnvioDAO envioDAO = new EnvioDAO();
         List<Envio> envios = envioDAO.selectAll();
         
-        Map<String, Float> totais = null;
+        Map<String, Double> totais = null;
         for (Envio envio : envios) {
             if (totais.containsKey(envio.getRemetente().getEstado())) {
-                Float valorAtual = totais.get(envio.getRemetente().getEstado());
+                double valorAtual = totais.get(envio.getRemetente().getEstado());
                 totais.put(envio.getRemetente().getEstado(), valorAtual + envio.getValorFrete());
             } else {
                 totais.put(envio.getRemetente().getEstado(), envio.getValorFrete());
@@ -96,7 +96,7 @@ public class TelaRelatorioFrete extends javax.swing.JFrame {
         }
         
         StringBuilder sb = new StringBuilder();
-        for (Map.Entry<String, Float> entry : totais.entrySet()) {
+        for (Map.Entry<String, Double> entry : totais.entrySet()) {
             sb.append(String.format("Estado - %s: R$%.2f\n", entry.getKey(), entry.getValue()));
         }
         

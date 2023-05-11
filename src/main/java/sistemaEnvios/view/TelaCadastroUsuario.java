@@ -89,6 +89,12 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
 
         lbTelefone.setText("Telefone:*");
 
+        txtTelefone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefoneActionPerformed(evt);
+            }
+        });
+
         lbNumero.setText("Nº:*");
 
         lbEmail.setText("E-mail:");
@@ -274,17 +280,17 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         Usuario usuario = new Usuario(
-                txtLogradouro.getText(),
-                txtCep.getText(),
+             txtLogradouro.getText(),
+                  txtCep.getText(),
                 txtCidade.getText(),
                 txtBairro.getText(),
                 txtEstado.getText(),
                 txtNumero.getText(),
-                txtNome.getText(),
-                txtEmail.getText(),
-                Integer.parseInt(txtTelefone.getText()),
-                txtCPF.getText(),
-                txtSenha.getText());     
+                  txtNome.getText(),
+                 txtEmail.getText(),
+               txtTelefone.getText(),
+                  txtCPF.getText(),
+                 txtSenha.getText());     
        UsuarioDAO usuariodao = new UsuarioDAO();
        usuariodao.salvarUsuario(usuario);
        JOptionPane.showMessageDialog(null, "Usuário salvo com sucesso!");
@@ -331,6 +337,10 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
          txtCPF.setText(usuario.getCpf());
          txtSenha.setText(usuario.getSenha());
     }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void txtTelefoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefoneActionPerformed
 
     /**
      * @param args the command line arguments

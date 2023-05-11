@@ -12,13 +12,13 @@ public abstract class Pessoa {
     private final int codigo; 
     private String nome;
     private String email;
-    private int telefone;
+    private String telefone;
     private String cpf;
     private String senha;
     
     private static int contadorPessoa=0;
 
-    public Pessoa(String nome, String email, int telefone, String cpf, String senha) {
+    public Pessoa(String nome, String email, String telefone, String cpf, String senha) {
         this.codigo = ++contadorPessoa;
         this.nome = nome;
         this.email = email;
@@ -47,11 +47,11 @@ public abstract class Pessoa {
         this.email = email;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 

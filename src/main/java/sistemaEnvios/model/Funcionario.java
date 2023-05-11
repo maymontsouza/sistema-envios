@@ -11,7 +11,7 @@ import sistemaEnvios.model.Pessoa;
  */
 public class Funcionario extends Pessoa {
 
-    public Funcionario(String nome, String email, int telefone, String cpf, String senha) {
+    public Funcionario(String nome, String email, String telefone, String cpf, String senha) {
         super(nome, email, telefone, cpf, senha);
     }
 }

@@ -17,7 +17,7 @@ public class Usuario extends Pessoa {
     private String Estado;
     private String Numero;
 
-    public Usuario(String Logradouro, String CEP, String Cidade, String Bairro, String Estado, String Numero, String nome, String email, int telefone, String cpf, String senha) {
+    public Usuario(String Logradouro, String CEP, String Cidade, String Bairro, String Estado, String Numero, String nome, String email, String telefone, String cpf, String senha) {
         super(nome, email, telefone, cpf, senha);
         this.Logradouro = Logradouro;
         this.CEP = CEP;

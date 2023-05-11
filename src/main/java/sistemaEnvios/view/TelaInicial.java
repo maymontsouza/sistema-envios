@@ -160,9 +160,19 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenu5.add(miEnvio);
 
         miFrete.setText("Relatório Fretes");
+        miFrete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miFreteActionPerformed(evt);
+            }
+        });
         jMenu5.add(miFrete);
 
         jMenuItem2.setText("Relatório Rementes Atendidos");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem2);
 
         jMenuBar1.add(jMenu5);
@@ -239,6 +249,16 @@ public class TelaInicial extends javax.swing.JFrame {
         TelaRelatorioRastreio telaRelatorioRastreio = new TelaRelatorioRastreio();
         telaRelatorioRastreio.setVisible(true);
     }//GEN-LAST:event_miEnvioActionPerformed
+
+    private void miFreteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miFreteActionPerformed
+        TelaRelatorioFrete t = new TelaRelatorioFrete();
+        t.setVisible(true);
+    }//GEN-LAST:event_miFreteActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+          TelaRelatorioRemetentesAtendidos t = new TelaRelatorioRemetentesAtendidos();
+          t.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments

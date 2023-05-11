@@ -479,7 +479,7 @@ public class TelaEnvios extends javax.swing.JFrame {
        Usuario destinatario = usuariodao.buscarUsuario(codigoDestinatario);
        Objeto objeto = objetodao.buscarObjeto(codigoObjeto);
        
-       float valorFrete = 0;
+        double valorFrete = 0;
         if (cbTipoFrete.getSelectedItem().toString().equals("Normal")) {
             Frete frete = new FreteNormal();
             valorFrete = frete.calculaFrete();

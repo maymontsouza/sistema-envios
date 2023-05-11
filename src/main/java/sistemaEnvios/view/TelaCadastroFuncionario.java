@@ -357,10 +357,10 @@ public class TelaCadastroFuncionario extends javax.swing.JFrame {
     private void btnSalvarFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarFuncionarioActionPerformed
         Funcionario funcionario = new Funcionario(
                 txtNome.getText(),
-                txtEmail.getText(),
-                Integer.parseInt(txtTelefone.getText()),
+               txtEmail.getText(),
+             txtTelefone.getText(),
                 txtCPF.getText(),
-                txtSenha.getText());
+               txtSenha.getText());
         FuncionarioDAO funcionariodao = new FuncionarioDAO();
         funcionariodao.salvarFuncionario(funcionario);
         JOptionPane.showMessageDialog(null, "Funcionario salvo com sucesso!");

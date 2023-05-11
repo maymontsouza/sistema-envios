@@ -17,9 +17,9 @@ import sistemaEnvios.model.Frete;
     private Usuario destinatario;
     private Objeto objeto;
     private String status;
-    private float valorFrete;
+    private double valorFrete;
 
-    public Envio(Usuario remetente, Usuario destinatario, Objeto objeto, String status, float valorFrete) {
+    public Envio(Usuario remetente, Usuario destinatario, Objeto objeto, String status, double valorFrete) {
         this.remetente = remetente;
         this.destinatario = destinatario;
         this.objeto = objeto;
@@ -59,11 +59,11 @@ import sistemaEnvios.model.Frete;
         this.status = status;
     }
 
-    public float getValorFrete() {
+    public double getValorFrete() {
         return valorFrete;
     }
 
-    public void setValorFrete(float valorFrete) {
+    public void setValorFrete(double valorFrete) {
         this.valorFrete = valorFrete;
     }
     
