@@ -256,7 +256,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_miFreteActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-          TelaRelatorioRemetentesAtendidos t = new TelaRelatorioRemetentesAtendidos();
+          TelaRelatorioRemetentes t = new TelaRelatorioRemetentes();
           t.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
