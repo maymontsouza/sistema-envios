@@ -4,6 +4,7 @@
  */
 package sistemaEnvios.view;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import sistemaEnvios.dao.EnvioDAO;
@@ -36,7 +37,7 @@ public class TelaRelatorioFrete extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         taRelatorio = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         btGerar.setText("Gerar");
         btGerar.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +86,7 @@ public class TelaRelatorioFrete extends javax.swing.JFrame {
         EnvioDAO envioDAO = new EnvioDAO();
         List<Envio> envios = envioDAO.selectAll();
         
-        Map<String, Double> totais = null;
+        Map<String, Double> totais = new HashMap();
         for (Envio envio : envios) {
             if (totais.containsKey(envio.getRemetente().getEstado())) {
                 double valorAtual = totais.get(envio.getRemetente().getEstado());
